@@ -1,0 +1,171 @@
+﻿/*
+Theme Name: Bootstrap
+Theme URI: http://www.crexyer.com/
+Description: A responsive theme built with Bootstrap
+Author: Crexyer
+Author URI: http://www.crexyer.com/
+Version: 1.0.0
+Tags: responsive, bootstrap
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+*/
+
+@import url('css/bootstrap.css');
+@import url('css/bootstrap-theme.css');
+
+/* Page */
+body {
+	/* Move down content because we have a fixed navbar that is 50px tall */
+	padding-top: 50px;
+	padding-bottom: 20px;
+	font-family: 'Microsoft YaHei UI','Microsoft YaHei',DengXian,SimSun,'Segoe UI',Tahoma,Helvetica,sans-serif;
+	line-height: 2;
+	background: #f3f3f2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Microsoft YaHei UI','Microsoft YaHei',DengXian,SimSun,'Segoe UI',Tahoma,Helvetica,sans-serif;
+}
+
+.thumbnail {
+	margin-bottom: 20px;
+}
+
+.tab-content {
+	margin-top: 20px;
+}
+
+.form-horizontal {
+	margin-top: 15px;
+}
+
+.jumbotron {
+	padding-top: 30px;
+	padding-bottom: 5px;
+	background: #f3f3f2;
+}
+
+.jumbotron h1, .jumbotron p {
+	margin-left: 10px;
+}
+
+blockquote {
+	font-size: 14px;
+}
+
+hr {
+	border-top: 1px solid #e0e0e0;
+}
+
+.paginate-nav-links, .comments-nav-links, .pages-nav-links {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#gotop {
+	background: url(images/gotop.png) 0 0 no-repeat;
+	width: 80px;
+	height: 80px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	text-decoration: none;  
+	display: none;
+	z-index: 100;
+}
+
+/* Article */
+article {
+	background-color: #ffffff;
+	border: 1px solid #e0e0e0;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	padding: 20px;
+	margin-bottom: 10px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);    
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
+}
+
+article h2 {
+	margin-bottom: 20px;
+}
+
+.content-area .page-header  {
+	margin-top: 0;
+}
+
+.content-area img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Comments */
+.comments-list {
+	margin-top: 20px;
+}
+
+.comment-body {
+	padding-top: 10px;
+	padding-bottom: 0;
+	position:relative;
+}
+
+.comment-metadata {
+	float: right;
+	margin-top: -30px;
+}
+
+.comment-content {
+	margin-left: 40px;
+	margin-top: 5px;
+}
+
+.fn {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.reply {
+	float: left;
+	position:absolute;
+	top: 47px;
+	display: none;
+}
+
+.depth-2, .depth-3 {
+	padding-left: 60px;
+	background: url(images/arrow.png) 0 10px no-repeat;
+}
+
+.comments-list {
+	padding-left: 0;
+}
+
+/* Widget */
+.widget ul {
+	padding-left:0;
+}
+
+.widget li {
+	margin: 5px 10px;
+	display : block;
+}
+
+.widget-panel h3 {
+	padding-bottom: 10px;
+	margin-top: 30px;
+}
+
+.meta ul, footer ul {
+	padding-left: 0;	
+}
+
+.meta li, footer li {
+	display: inline;
+	margin-right: 10px;
+}
+
+.search-box {
+	margin-bottom: 20px;
+}

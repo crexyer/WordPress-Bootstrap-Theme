@@ -1,0 +1,146 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Bootstrap\n"
+"POT-Creation-Date: 2013-12-24 22:11+0800\n"
+"PO-Revision-Date: 2013-12-24 22:11+0800\n"
+"Last-Translator: Crexyer <crexyer@gmail.com>\n"
+"Language-Team: Crexyer <crexyer@gmail.com>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:7 front-page.php:23 index.php:23 page.php:21 search.php:23
+msgid "Sorry, this page does not exist."
+msgstr "对不起，这个页面不存在。"
+
+#: 404.php:11
+msgid "Maybe try a search?"
+msgstr "试一试搜索？"
+
+#: 404.php:12 404.php:14 sidebar.php:8
+msgid "Search"
+msgstr "搜索"
+
+#: comments.php:3
+msgid "Comments"
+msgstr "评论"
+
+#: comments.php:5
+msgid "Comments List"
+msgstr "评论列表"
+
+#: comments.php:7
+msgid "Enter password to view comments."
+msgstr "输入密码以查看评论"
+
+#: comments.php:9
+msgid "Comments are closed."
+msgstr "评论被关闭"
+
+#: comments.php:11
+msgid "No comments."
+msgstr "没有评论"
+
+#: comments.php:24 functions.php:141 functions.php:229 functions.php:249
+msgid "Previous"
+msgstr "上一页"
+
+#: comments.php:25 functions.php:142 functions.php:230 functions.php:248
+msgid "Next"
+msgstr "下一页"
+
+#: comments.php:49
+msgid "Name"
+msgstr "昵称"
+
+#: comments.php:51
+msgid "Email"
+msgstr "邮箱"
+
+#: comments.php:53
+msgid "Website (optional)"
+msgstr "你的网站（可选）"
+
+#: comments.php:55
+msgid "Write your comment here."
+msgstr "在这里写下你的评论。"
+
+#: footer.php:4
+#, php-format
+msgid "Theme designed by %s"
+msgstr "主题设计 %s"
+
+#: footer.php:6
+#, php-format
+msgid "Powered by %s"
+msgstr "使用 %s 构建"
+
+#: footer.php:6
+msgid "http://wordpress.org/"
+msgstr "http://cn.wordpress.org/"
+
+#: front-page.php:20 index.php:20 page.php:18 search.php:20
+msgid "Read More"
+msgstr "阅读全文"
+
+#: functions.php:9
+msgid "Navigation Menu"
+msgstr "导航菜单"
+
+#: functions.php:126
+#, php-format
+msgid "Page %s"
+msgstr "第 %s 页"
+
+#: functions.php:323
+msgid "Page number"
+msgstr "文章页码"
+
+#: functions.php:345 functions.php:360
+#, php-format
+msgid "View all posts in %s"
+msgstr "查看%s中的全部文章"
+
+#: header.php:19
+msgid "Back to top"
+msgstr "回到顶部"
+
+#: header.php:56
+msgid ""
+"Your browser does not support HTML5, please update or change your browser to "
+"get a better browsing experience."
+msgstr "你的浏览器不支持 HTML5，请升级或更换浏览器以获得更好的浏览体验。"
+
+# Preserved
+#, fuzzy
+#~ msgid "Next page"
+#~ msgstr "下一页"
+
+# Preserved
+#, fuzzy
+#~ msgid "Previous page"
+#~ msgstr "上一页"
+
+#~ msgid "Generated Time"
+#~ msgstr "页面生成时间"
+
+#~ msgid "Leave a Reply"
+#~ msgstr "留下一个回复"
+
+#~ msgid "Website"
+#~ msgstr "网站地址"
+
+#~ msgid "Add a comment"
+#~ msgstr "添加评论"
+
+#~ msgid "The theme is built with Bootstrap"
+#~ msgstr "主题使用 Bootstrap 构建"
+
+#~ msgid "Header Menu"
+#~ msgstr "顶部菜单"
