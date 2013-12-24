@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Bootstrap\n"
 "POT-Creation-Date: 2013-12-24 22:11+0800\n"
-"PO-Revision-Date: 2013-12-24 22:11+0800\n"
+"PO-Revision-Date: 2013-12-24 22:47+0800\n"
 "Last-Translator: Crexyer <crexyer@gmail.com>\n"
 "Language-Team: Crexyer <crexyer@gmail.com>\n"
 "Language: zh_CN\n"
@@ -116,31 +116,3 @@ msgid ""
 "Your browser does not support HTML5, please update or change your browser to "
 "get a better browsing experience."
 msgstr "你的浏览器不支持 HTML5，请升级或更换浏览器以获得更好的浏览体验。"
-
-# Preserved
-#, fuzzy
-#~ msgid "Next page"
-#~ msgstr "下一页"
-
-# Preserved
-#, fuzzy
-#~ msgid "Previous page"
-#~ msgstr "上一页"
-
-#~ msgid "Generated Time"
-#~ msgstr "页面生成时间"
-
-#~ msgid "Leave a Reply"
-#~ msgstr "留下一个回复"
-
-#~ msgid "Website"
-#~ msgstr "网站地址"
-
-#~ msgid "Add a comment"
-#~ msgstr "添加评论"
-
-#~ msgid "The theme is built with Bootstrap"
-#~ msgstr "主题使用 Bootstrap 构建"
-
-#~ msgid "Header Menu"
-#~ msgstr "顶部菜单"
