@@ -151,6 +151,7 @@ function bootstrap_paginate_links_core($args = '') {
 		$page_links [] = '<a class="btn btn-default prev" href="' . esc_url ( apply_filters ( 'paginate_links', $link ) ) . '">' . $prev_text . '</a>';
 	
 	
+	
 	endif;
 	for($n = 1; $n <= $total; $n ++) :
 		$n_display = number_format_i18n ( $n );
@@ -180,6 +181,7 @@ function bootstrap_paginate_links_core($args = '') {
 			$link = add_query_arg ( $add_args, $link );
 		$link .= $add_fragment;
 		$page_links [] = '<a class="btn btn-default next" href="' . esc_url ( apply_filters ( 'paginate_links', $link ) ) . '">' . $next_text . '</a>';
+	
 	
 	
 	endif;
@@ -331,28 +333,25 @@ function bootstrap_tags() {
 		echo trim ( $output, $separator );
 	}
 }
-function bootstrap_shortcode_button($atts, $content = null) {
-	extract ( shortcode_atts ( array (
-			'array' => '' 
-	), $atts ) );
+function bootstrap_shortcode_button($atts, $content = '') {
+	$json = json_decode ( $content, true );
+	$length = count ( $json );
+	$output = '';
+	if ($length == 0)
+		return $output;
+	if ($length != 1)
+		$output .= '<div class="btn-group">';
+	foreach ( $json as $key => $val ) {
+		if ($key == '_icon') {
+			$output .= '<a class="btn btn-default"><span class="' . $val . '"</span></a>';
+		} else {
+			$output .= '<a class="btn btn-default" href="' . $val . '" target="_blank">' . $key . '</a>';
+		}
+	}
+	if ($length != 1)
+		$output .= '</div>';
 	
-	return '<script>var button = ' . $array . ';
-	var isGroup = (Object.keys(button).length == 1) ? false : true;
-	if (isGroup) {
-		document.write(\'<div class="btn-group">\');
-	}
-	for (var i in button) {
-			if (i == "_icon"){
-				document.write(\'<a class="btn btn-default"><span class="\' + button[i] + \'"</span></a>\');
-			}
-			else {
-				document.write(\'<a class="btn btn-default" href="\' + button[i] + \'" target="_blank">\' + i + \'</a>\');
-			}
-	}
-	if (isGroup) {
-		document.write(\'</div>\');
-	}
-</script>';
+	return $output;
 }
 add_shortcode ( "button", "bootstrap_shortcode_button" );
 function bootstrap_paginate_comments_links_core($args = array()) {
@@ -396,4 +395,5 @@ function bootstrap_paginate_comments_links() {
 	}
 }
 
+remove_filter ( 'the_content', 'wptexturize' );
 ?>
