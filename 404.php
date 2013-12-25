@@ -9,8 +9,7 @@
 				<form role="form" role="search" method="get" action="<?php echo site_url(); ?>">
 					<div class="form-group">
 						<label><?php _e( 'Maybe try a search?', 'Bootstrap' ); ?></label>
-						<input type="search" class="form-control"
-							placeholder="<?php _e( 'Search', 'Bootstrap' ); ?>" value="" name="s" title="<?php _e( 'Search', 'Bootstrap' ); ?>">
+						<input type="search" class="form-control" placeholder="<?php _e( 'Search', 'Bootstrap' ); ?>" value="" name="s" title="<?php _e( 'Search', 'Bootstrap' ); ?>">
 					</div>
 					<input type="submit" class="btn btn-primary" value="<?php _e( 'Search', 'Bootstrap' ); ?>">
 				</form>
