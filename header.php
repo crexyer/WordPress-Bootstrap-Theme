@@ -16,7 +16,7 @@
 	</script>
 </head>
 <body>
-	<a id="gotop" href="#" title="<?php _e('Back to top', 'Bootstrap'); ?>"></a>
+	<a id="gotop" href="#" title="<?php _e( 'Back to top', 'Bootstrap' ); ?>"></a>
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -27,12 +27,12 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="<?php echo site_url(); ?>"><span class="glyphicon glyphicon-home"></span> <?php bloginfo('name'); ?></a>
+				<a class="navbar-brand" href="<?php echo site_url(); ?>"><span class="glyphicon glyphicon-home"></span> <?php bloginfo( 'name' ); ?></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="navbar-collapse">
 				<ul class="nav navbar-nav">
-					<?php if(function_exists('wp_nav_menu')) wp_nav_menu(array(
+					<?php if( function_exists( 'wp_nav_menu' ) ) wp_nav_menu(array(
 							'container' => false,
 							'theme_location' => 'primary',
 							'items_wrap' => '%3$s',
@@ -44,14 +44,14 @@
 	</nav>
 	<div class="jumbotron">
 		<div class="container">
-			<h1><?php bloginfo('name' ); ?></h1>
+			<h1><?php bloginfo( 'name' ); ?></h1>
 			<p>
-				<?php bloginfo('description', 'display'); ?>
+				<?php bloginfo( 'description', 'display' ); ?>
 			</p>
 		</div>
 	</div>
 	<div class="container">
   	<div class="alert alert-danger fade in hide" id="alert-HTML5">
 			<button class="close" data-dismiss="alert">×</button>
-  		<?php _e('Your browser does not support HTML5, please update or change your browser to get a better browsing experience.', 'Bootstrap'); ?>
+  		<?php _e( 'Your browser does not support HTML5, please update or change your browser to get a better browsing experience.', 'Bootstrap' ); ?>
 		</div>
