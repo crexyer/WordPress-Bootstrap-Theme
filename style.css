@@ -1,4 +1,4 @@
-﻿/*
+/*
 Theme Name: Bootstrap
 Theme URI: http://www.crexyer.com/
 Description: A responsive theme built with Bootstrap
@@ -9,8 +9,8 @@ Tags: responsive, bootstrap
 License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 License URI: http://creativecommons.org/licenses/by-sa/3.0/
 */
-
 @import url('css/bootstrap.css');
+
 @import url('css/bootstrap-theme.css');
 
 /* Page */
@@ -18,13 +18,13 @@ body {
 	/* Move down content because we have a fixed navbar that is 50px tall */
 	padding-top: 50px;
 	padding-bottom: 20px;
-	font-family: 'Microsoft YaHei UI','Microsoft YaHei',DengXian,SimSun,'Segoe UI',Tahoma,Helvetica,sans-serif;
+	font-family: 'Microsoft YaHei UI', 'Microsoft YaHei', DengXian, SimSun, 'Segoe UI', Tahoma, Helvetica, sans-serif;
 	line-height: 2;
 	background: #f3f3f2;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Microsoft YaHei UI','Microsoft YaHei',DengXian,SimSun,'Segoe UI',Tahoma,Helvetica,sans-serif;
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Microsoft YaHei UI', 'Microsoft YaHei', DengXian, SimSun, 'Segoe UI', Tahoma, Helvetica, sans-serif;
 }
 
 .thumbnail {
@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 	background: #f3f3f2;
 }
 
-.jumbotron h1, .jumbotron p {
+.jumbotron h1,.jumbotron p {
 	margin-left: 10px;
 }
 
@@ -57,7 +57,7 @@ hr {
 	border-top: 1px solid #e0e0e0;
 }
 
-.paginate-nav-links, .comments-nav-links, .pages-nav-links {
+.paginate-nav-links,.comments-nav-links,.pages-nav-links {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
@@ -69,7 +69,7 @@ hr {
 	position: fixed;
 	bottom: 30px;
 	right: 30px;
-	text-decoration: none;  
+	text-decoration: none;
 	display: none;
 	z-index: 100;
 }
@@ -83,7 +83,7 @@ article {
 	border-radius: 4px;
 	padding: 20px;
 	margin-bottom: 10px;
-	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);    
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
 }
 
@@ -91,7 +91,7 @@ article h2 {
 	margin-bottom: 20px;
 }
 
-.content-area .page-header  {
+.content-area .page-header {
 	margin-top: 0;
 }
 
@@ -108,7 +108,7 @@ article h2 {
 .comment-body {
 	padding-top: 10px;
 	padding-bottom: 0;
-	position:relative;
+	position: relative;
 }
 
 .comment-metadata {
@@ -128,12 +128,12 @@ article h2 {
 
 .reply {
 	float: left;
-	position:absolute;
+	position: absolute;
 	top: 47px;
 	display: none;
 }
 
-.depth-2, .depth-3 {
+.depth-2,.depth-3 {
 	padding-left: 60px;
 	background: url(images/arrow.png) 0 10px no-repeat;
 }
@@ -144,12 +144,12 @@ article h2 {
 
 /* Widget */
 .widget ul {
-	padding-left:0;
+	padding-left: 0;
 }
 
 .widget li {
 	margin: 5px 10px;
-	display : block;
+	display: block;
 }
 
 .widget-panel h3 {
@@ -157,11 +157,11 @@ article h2 {
 	margin-top: 30px;
 }
 
-.meta ul, footer ul {
-	padding-left: 0;	
+.meta ul,footer ul {
+	padding-left: 0;
 }
 
-.meta li, footer li {
+.meta li,footer li {
 	display: inline;
 	margin-right: 10px;
 }
