@@ -343,7 +343,7 @@ function bootstrap_shortcode_button($atts, $content = '') {
 		$output .= '<div class="btn-group">';
 	foreach ( $json as $key => $val ) {
 		if ($key == '_icon') {
-			$output .= '<a class="btn btn-default"><span class="' . $val . '"</span></a>';
+			$output .= '<a class="btn btn-default"><span class="' . $val . ' icon"</span></a>';
 		} else {
 			$output .= '<a class="btn btn-default" href="' . $val . '" target="_blank">' . $key . '</a>';
 		}
