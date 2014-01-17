@@ -23,8 +23,7 @@ jQuery(document)
 					});
 					jQuery(function() {
 						jQuery(window).scroll(function() {
-							var scrollt = document.documentElement.scrollTop;
-							if (scrollt > 700) {
+							if (jQuery("body").scrollTop() > 700) {
 								jQuery("#gotop").fadeIn(300);
 							} else {
 								jQuery("#gotop").stop().fadeOut(300);
