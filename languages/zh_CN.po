@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bootstrap\n"
-"POT-Creation-Date: 2013-12-24 22:11+0800\n"
-"PO-Revision-Date: 2013-12-24 22:47+0800\n"
+"POT-Creation-Date: 2014-01-24 23:56+0800\n"
+"PO-Revision-Date: 2014-01-24 23:57+0800\n"
 "Last-Translator: Crexyer <crexyer@gmail.com>\n"
 "Language-Team: Crexyer <crexyer@gmail.com>\n"
 "Language: zh_CN\n"
@@ -47,41 +47,69 @@ msgstr "评论被关闭"
 msgid "No comments."
 msgstr "没有评论"
 
-#: comments.php:24 functions.php:141 functions.php:229 functions.php:249
-msgid "Previous"
-msgstr "上一页"
-
-#: comments.php:25 functions.php:142 functions.php:230 functions.php:248
-msgid "Next"
-msgstr "下一页"
-
-#: comments.php:49
+#: comments.php:28
 msgid "Name"
 msgstr "昵称"
 
-#: comments.php:51
+#: comments.php:30
 msgid "Email"
 msgstr "邮箱"
 
-#: comments.php:53
+#: comments.php:32
 msgid "Website (optional)"
 msgstr "你的网站（可选）"
 
-#: comments.php:55
+#: comments.php:34
 msgid "Write your comment here."
 msgstr "在这里写下你的评论。"
+
+#: control.php:6
+msgid "Navbar Brand"
+msgstr "导航条标题"
+
+#: control.php:12
+msgid "Analytics Code"
+msgstr "统计代码"
+
+#: control.php:16
+msgid "Enter your analytics codes or other html codes."
+msgstr "输入你的统计代码或其他 html 代码。"
+
+#: control.php:43 control.php:53
+msgid "Theme Setup"
+msgstr "主题设置"
+
+#: control.php:48
+msgid "Your settings have been saved."
+msgstr "你的设置已经被保存。"
+
+#: control.php:50
+msgid "Your settings have been reset."
+msgstr "你的设置已经被重置。"
+
+#: control.php:88
+msgid "Save"
+msgstr "保存"
+
+#: control.php:95
+msgid "If you want to reset your settings, please click reset button."
+msgstr "如果你想重置设置，请点击重置按钮。"
+
+#: control.php:98
+msgid "Reset"
+msgstr "重置"
 
 #: footer.php:4
 #, php-format
 msgid "Theme designed by %s"
 msgstr "主题设计 %s"
 
-#: footer.php:6
+#: footer.php:5
 #, php-format
 msgid "Powered by %s"
 msgstr "使用 %s 构建"
 
-#: footer.php:6
+#: footer.php:5
 msgid "http://wordpress.org/"
 msgstr "http://cn.wordpress.org/"
 
@@ -89,30 +117,32 @@ msgstr "http://cn.wordpress.org/"
 msgid "Read More"
 msgstr "阅读全文"
 
-#: functions.php:9
+#: functions.php:7
 msgid "Navigation Menu"
 msgstr "导航菜单"
 
-#: functions.php:126
+#: functions.php:107
 #, php-format
 msgid "Page %s"
 msgstr "第 %s 页"
 
-#: functions.php:323
+#: functions.php:120 functions.php:215 functions.php:232 functions.php:391
+msgid "Previous"
+msgstr "上一页"
+
+#: functions.php:121 functions.php:216 functions.php:231 functions.php:392
+msgid "Next"
+msgstr "下一页"
+
+#: functions.php:305
 msgid "Page number"
 msgstr "文章页码"
 
-#: functions.php:345 functions.php:360
+#: functions.php:322 functions.php:333
 #, php-format
 msgid "View all posts in %s"
 msgstr "查看%s中的全部文章"
 
-#: header.php:19
+#: header.php:12
 msgid "Back to top"
 msgstr "回到顶部"
-
-#: header.php:56
-msgid ""
-"Your browser does not support HTML5, please update or change your browser to "
-"get a better browsing experience."
-msgstr "你的浏览器不支持 HTML5，请升级或更换浏览器以获得更好的浏览体验。"
