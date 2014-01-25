@@ -22,14 +22,15 @@ jQuery(document)
 						}
 					});
 					jQuery(function() {
-						jQuery(window).scroll(function() {
+						jQuery(window).bind("resize scroll", function() {
 							var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-							if (scrollTop > 700) {
-								jQuery("#gotop").fadeIn(300);
+							if (scrollTop > 700 && window.innerWidth > 1200) {
+								jQuery("#gotop").fadeIn(200);
 							} else {
-								jQuery("#gotop").stop().fadeOut(300);
+								jQuery("#gotop").stop().fadeOut(200);
 							}
 						});
+						jQuery(window).scroll();
 						jQuery("#gotop").click(function() {
 							jQuery("html,body").animate({
 								scrollTop : 0
@@ -37,7 +38,4 @@ jQuery(document)
 							return false;
 						});
 					});
-					if (Modernizr.canvas == false) {
-						jQuery("#alert-HTML5").removeClass("hide");
-					}
 				});
