@@ -9,16 +9,6 @@ function bootstrap_add_admin() {
 				"type" => "text"
 		),
 		array (
-				"name" => __ ( 'Theme Style', 'Bootstrap' ),
-				"id" => "theme_style",
-				"std" => "flat",
-				"type" => "radio",
-				"list" => array (
-					"flat" => __ ( 'Flat', 'Bootstrap' ),
-					"skeuomorphism" => __ ( 'Skeuomorphism', 'Bootstrap' )
-				)
-		),
-		array (
 				"name" => __ ( 'Navbar Color', 'Bootstrap' ),
 				"id" => "navbar_color",
 				"std" => "black",
