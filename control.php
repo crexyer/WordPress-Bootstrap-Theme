@@ -4,17 +4,37 @@ function bootstrap_add_admin() {
 	$options = array (
 		array (
 				"name" => __ ( 'Navbar Brand', 'Bootstrap' ),
-				"id" => "brand",
+				"id" => "navbar_brand",
 				"std" => get_bloginfo ( 'name' ),
-				"type" => "text" 
+				"type" => "text"
+		),
+		array (
+				"name" => __ ( 'Theme Style', 'Bootstrap' ),
+				"id" => "theme_style",
+				"std" => "flat",
+				"type" => "radio",
+				"list" => array (
+					"flat" => __ ( 'Flat', 'Bootstrap' ),
+					"skeuomorphism" => __ ( 'Skeuomorphism', 'Bootstrap' )
+				)
+		),
+		array (
+				"name" => __ ( 'Navbar Color', 'Bootstrap' ),
+				"id" => "navbar_color",
+				"std" => "black",
+				"type" => "radio",
+				"list" => array (
+					"black" => __ ( 'Black', 'Bootstrap' ),
+					"white" => __ ( 'White', 'Bootstrap' )
+				)
 		),
 		array (
 				"name" => __ ( 'Analytics Code', 'Bootstrap' ),
-				"id" => "analytics",
+				"id" => "analytics_code",
 				"std" => "",
 				"type" => "textarea",
 				"label" => __ ( 'Enter your analytics codes or other html codes.', 'Bootstrap' )
-		) 
+		)
 	);
 	
 	if ( $_GET ['page'] == basename ( __FILE__ ) ) {
@@ -61,7 +81,7 @@ function bootstrap_admin() {
         <tr valign="top">
 					<th scope="row"><label><?php echo $value['name']; ?></label></th>
 					<td>
-						<input name="<?php echo $value['id']; ?>" class="regular-text ltr" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "" ) { echo stripslashes ( get_settings( $value['id'] )); } else { echo $value['std']; } ?>" size="40" />
+						<input name="<?php echo $value['id']; ?>" class="regular-text ltr" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php echo stripslashes ( get_option ( $value['id'], $value['std'] )); ?>" size="40" />
 						<?php
   						if ( isset ( $value ['label'] ) && $value ['label'] != "" ) {
 								echo '<p class="description">' . $value ['label'] . '</p>';
@@ -72,7 +92,7 @@ function bootstrap_admin() {
     	<?php } elseif ( $value['type'] == "textarea" ) { ?>
         <tr valign="top">
 					<th scope="row"><label><?php echo $value['name']; ?></label></th>
-					<td><textarea name="<?php echo $value['id']; ?>" class="widefat" rows="5"><?php if ( get_settings( $value['id'] ) != "") { echo stripslashes ( get_settings( $value['id'] ) ); } else { echo $value['std']; } ?></textarea>
+					<td><textarea name="<?php echo $value['id']; ?>" class="widefat" rows="5"><?php echo stripslashes ( get_option ( $value['id'], $value['std'] )); ?></textarea>
       	<?php
     			if ( isset ( $value ['label'] ) && $value ['label'] != "" ) {
 						echo '<p class="description">' . $value ['label'] . '</p>';
@@ -80,7 +100,29 @@ function bootstrap_admin() {
 				?>
         	</td>
 				</tr>
-     		<?php } ?>
+     	<?php } elseif ( $value['type'] == "radio" ) { ?>
+        <tr valign="top">
+					<th scope="row"><label><?php echo $value['name']; ?></label></th>
+					<td>
+						<fieldset>
+						<?php
+							foreach ( $value['list'] as $key => $radio) {
+    						?>
+    						<label>
+    							<input type="radio" name="<?php echo $value['id']; ?>" value="<?php echo $key; ?>"<?php if ( get_option ( $value['id'], $value['std'] ) == $key ) { ?> checked="checked"<?php } ?>/>
+    							<span><?php echo $radio; ?></span>
+    						</label>
+    						<br>
+							<?php }?>
+						<?php
+  						if ( isset ( $value ['label'] ) && $value ['label'] != "" ) {
+								echo '<p class="description">' . $value ['label'] . '</p>';
+							}
+						?>
+						</fieldset>
+					</td>
+				</tr>
+     	<?php }?>
       <?php } ?>
     	</tbody>
 		</table>
@@ -89,16 +131,32 @@ function bootstrap_admin() {
 			<input type="hidden" name="action" value="save" />
 		</div>
 	</form>
-	<hr>
+</div>
+<div class="wrap">
+	<h2 class="title"><?php _e ( 'Reset Settings', 'Bootstrap' ); ?></h2>
+	<p><?php _e ( 'If you want to reset your settings, please click reset button.', 'Bootstrap' ); ?></p>
 	<form method="post">
-		<p>
-			<strong><?php _e ( 'If you want to reset your settings, please click reset button.', 'Bootstrap' ); ?></strong>
-		</p>
 		<div class="submit">
 			<input name="reset" class="button" type="submit" value="<?php _e ( 'Reset', 'Bootstrap' ); ?>" />
 			<input type="hidden" name="action" value="reset" />
 		</div>
 	</form>
+</div>
+<div class="wrap">
+	<h2 class="title"><?php _e ( 'About', 'Bootstrap' ); ?></h2>
+	<table class="form-table">
+		<tbody>
+			<tr valign="top">
+				<th scope="row"><label><?php _e ( 'Theme Version', 'Bootstrap' ); ?></label></th>
+				<td><?php echo wp_get_theme() -> get( 'Version' ); ?></td>
+			</tr>
+			<tr valign="top">
+				<th scope="row"><label><?php _e ( 'Designer', 'Bootstrap' ); ?></label></th>
+				<td>Crexyer</td>
+			</tr>
+		</tbody>
+	</table>
+	<p><?php printf( __ ( 'If you have feedback or questions, please click %s.', 'Bootstrap' ), '<a href="http://www.crexyer.com/" target="_blank">http://www.crexyer.com/</a>' ); ?></p>
 </div>
 <?php
 	}

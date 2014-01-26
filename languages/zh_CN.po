@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bootstrap\n"
-"POT-Creation-Date: 2014-01-24 23:56+0800\n"
-"PO-Revision-Date: 2014-01-24 23:57+0800\n"
+"POT-Creation-Date: 2014-01-26 11:36+0800\n"
+"PO-Revision-Date: 2014-01-26 11:37+0800\n"
 "Last-Translator: Crexyer <crexyer@gmail.com>\n"
 "Language-Team: Crexyer <crexyer@gmail.com>\n"
 "Language: zh_CN\n"
@@ -68,36 +68,81 @@ msgid "Navbar Brand"
 msgstr "导航条标题"
 
 #: control.php:12
+msgid "Theme Style"
+msgstr "主题风格"
+
+#: control.php:17
+msgid "Flat"
+msgstr "扁平化"
+
+#: control.php:18
+msgid "Skeuomorphism"
+msgstr "拟物化"
+
+#: control.php:22
+msgid "Navbar Color"
+msgstr "导航条颜色"
+
+#: control.php:27
+msgid "Black"
+msgstr "黑色"
+
+#: control.php:28
+msgid "White"
+msgstr "白色"
+
+#: control.php:32
 msgid "Analytics Code"
 msgstr "统计代码"
 
-#: control.php:16
+#: control.php:36
 msgid "Enter your analytics codes or other html codes."
 msgstr "输入你的统计代码或其他 html 代码。"
 
-#: control.php:43 control.php:53
+#: control.php:63 control.php:73
 msgid "Theme Setup"
 msgstr "主题设置"
 
-#: control.php:48
+#: control.php:68
 msgid "Your settings have been saved."
 msgstr "你的设置已经被保存。"
 
-#: control.php:50
+#: control.php:70
 msgid "Your settings have been reset."
 msgstr "你的设置已经被重置。"
 
-#: control.php:88
+#: control.php:130
 msgid "Save"
 msgstr "保存"
 
-#: control.php:95
+#: control.php:136
+msgid "Reset Settings"
+msgstr "重置设置"
+
+#: control.php:137
 msgid "If you want to reset your settings, please click reset button."
 msgstr "如果你想重置设置，请点击重置按钮。"
 
-#: control.php:98
+#: control.php:140
 msgid "Reset"
 msgstr "重置"
+
+#: control.php:146
+msgid "About"
+msgstr "关于"
+
+#: control.php:150
+msgid "Theme Version"
+msgstr "主题版本"
+
+#: control.php:154
+msgid "Designer"
+msgstr "主题设计"
+
+#: control.php:159
+#, php-format
+msgid "If you have feedback or questions, please click %s."
+msgstr "如果你有反馈或疑问，请点击  %s。"
 
 #: footer.php:4
 #, php-format
@@ -126,23 +171,23 @@ msgstr "导航菜单"
 msgid "Page %s"
 msgstr "第 %s 页"
 
-#: functions.php:120 functions.php:215 functions.php:232 functions.php:391
+#: functions.php:120 functions.php:217 functions.php:234 functions.php:393
 msgid "Previous"
 msgstr "上一页"
 
-#: functions.php:121 functions.php:216 functions.php:231 functions.php:392
+#: functions.php:121 functions.php:218 functions.php:233 functions.php:394
 msgid "Next"
 msgstr "下一页"
 
-#: functions.php:305
+#: functions.php:307
 msgid "Page number"
 msgstr "文章页码"
 
-#: functions.php:322 functions.php:333
+#: functions.php:324 functions.php:335
 #, php-format
 msgid "View all posts in %s"
 msgstr "查看%s中的全部文章"
 
-#: header.php:12
+#: header.php:16
 msgid "Back to top"
 msgstr "回到顶部"

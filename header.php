@@ -4,13 +4,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/bootstrap.css' ; ?>" type="text/css" />
+	<?php if ( get_option ( 'theme_style', 'flat' ) == "skeuomorphism" ) { ?>
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/bootstrap-theme.css' ; ?>" type="text/css" />
+	<?php } ?>
 	<link rel="stylesheet" href="<?php bloginfo ( 'stylesheet_url' );?>">
 	<title><?php wp_title ( '|', true, 'right' ); ?></title>
-	<?php echo stripslashes ( get_option ( 'analytics' ) ); ?>
+	<?php echo stripslashes ( get_option ( 'analytics_code', '' ) ); ?>
 </head>
 <body>
 	<a id="gotop" href="#" title="<?php _e ( 'Back to top', 'Bootstrap' ); ?>"></a>
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<nav class="navbar <?php $navbar_color = get_option ( 'navbar_color', 'black' ); if ( $navbar_color == "black" ) { echo 'navbar-inverse'; } elseif ( $navbar_color == "white" ) { echo 'navbar-default'; } ?> navbar-fixed-top" role="navigation">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 		  <div class="navbar-header">
@@ -20,7 +24,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="<?php echo site_url(); ?>"><span class="glyphicon glyphicon-home"></span> <?php echo stripslashes( get_option ( 'brand' ) ); ?></a>
+				<a class="navbar-brand" href="<?php echo site_url(); ?>"><span class="glyphicon glyphicon-home"></span> <?php echo stripslashes( get_option ( 'navbar_brand', get_bloginfo ( 'name' ) ) ); ?></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="navbar-collapse">
