@@ -86,6 +86,7 @@ hr {
 	text-decoration: none;
 	display: none;
 	z-index: 100;
+	transition: none;
 }
 
 /* Article */
