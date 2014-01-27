@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 <div class="row">
 	<div class="col-lg-9">
+		<div class="alert alert-info fade in">
+			<p><?php echo __ ( 'Search Results for: ', 'Bootstrap' ) . get_search_query(); ?></p>
+		</div>
 		<div class="content-area">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<article>
@@ -13,7 +16,9 @@
 							<li><span class="glyphicon glyphicon-user"></span> <?php echo get_the_author(); ?></li>
 							<li><span class="glyphicon glyphicon-time"></span> <?php echo get_the_date(); ?></li>
 							<li><span class="glyphicon glyphicon-folder-open"></span> <?php bootstrap_category(); ?></li>
-							<li><span class="glyphicon glyphicon-tag"></span> <?php bootstrap_tags(); ?></li>
+							<?php $tags = bootstrap_tags(); if ( $tags != "" ) { ?>
+							<li><span class="glyphicon glyphicon-tag"></span> <?php echo $tags; ?></li>
+							<?php } ?>
 						</ul>
 					</div>
 				</div>
