@@ -13,7 +13,9 @@
 							<li><span class="glyphicon glyphicon-user"></span> <?php echo get_the_author(); ?></li>
 							<li><span class="glyphicon glyphicon-time"></span> <?php echo get_the_date(); ?></li>
 							<li><span class="glyphicon glyphicon-folder-open"></span> <?php bootstrap_category(); ?></li>
-							<li><span class="glyphicon glyphicon-tag"></span> <?php bootstrap_tags(); ?></li>
+							<?php $tags = bootstrap_tags(); if ( $tags != "" ) { ?>
+							<li><span class="glyphicon glyphicon-tag"></span> <?php echo $tags; ?></li>
+							<?php } ?>
 						</ul>
 					</div>
 				</div>

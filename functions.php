@@ -334,7 +334,7 @@ function bootstrap_tags() {
 		foreach ( $tags as $tag ) {
 			$output .= '<a href="' . get_tag_link ( $tag->term_id ) . '" title="' . esc_attr ( sprintf ( __ ( "View all posts in %s" ), $tag->name ) ) . '">' . $tag->name . '</a>' . $separator;
 		}
-		echo trim ( $output, $separator );
+		return trim ( $output, $separator );
 	}
 }
 function bootstrap_shortcode_button($atts, $content = '') {
