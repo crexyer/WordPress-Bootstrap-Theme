@@ -4,7 +4,7 @@ Theme URI: http://www.crexyer.com/
 Description: A responsive theme built with Bootstrap
 Author: Crexyer
 Author URI: http://www.crexyer.com/
-Version: 1.0.3
+Version: 1.0.4
 Tags: responsive, bootstrap
 License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 License URI: http://creativecommons.org/licenses/by-sa/3.0/
@@ -15,7 +15,7 @@ a:hover {
 	text-decoration: none;
 }
 
-a,.btn,button {
+a:not(#gotop),.btn,button {
 	transition: all 0.2s ease;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
@@ -26,15 +26,13 @@ body {
 	/* Move down content because we have a fixed navbar that is 50px tall */
 	padding-top: 50px;
 	padding-bottom: 20px;
-	font-family: 'Microsoft YaHei UI', 'Microsoft YaHei', DengXian, SimSun,
-		'Segoe UI', Tahoma, Helvetica, sans-serif;
+	font-family: 'Microsoft YaHei UI', 'Microsoft YaHei', DengXian, SimSun,'Segoe UI', Tahoma, Helvetica, sans-serif;
 	line-height: 2;
 	background: #f3f3f2;
 }
 
 h1,h2,h3,h4,h5,h6 {
-	font-family: 'Microsoft YaHei UI', 'Microsoft YaHei', DengXian, SimSun,
-		'Segoe UI', Tahoma, Helvetica, sans-serif;
+	font-family: 'Microsoft YaHei UI', 'Microsoft YaHei', DengXian, SimSun,'Segoe UI', Tahoma, Helvetica, sans-serif;
 }
 
 ::selection {
@@ -69,7 +67,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 blockquote {
-	font-size: 14px;
+	font-size: 16px;
 }
 
 hr {
@@ -91,7 +89,6 @@ hr {
 	text-decoration: none;
 	display: none;
 	z-index: 100;
-	transition: none;
 }
 
 /* Article */
@@ -105,17 +102,25 @@ article {
 	margin-bottom: 10px;
 }
 
-article>h1,article>h2 {
+.article-content h1,.article-content h2 {
 	border-left: 5px solid #999;
 	padding-left: 15px;
 	margin-left: -20px;
 	margin-bottom: 20px;
 }
 
+.article-content a:not(.btn) {
+	border-bottom: 2px solid #eaeaea;
+}
+
+.article-content a:not(.btn):hover {
+	border-bottom: 2px solid #2a6496;
+}
+
 .page-header h1 a {
-	border-left: 5px solid #428bca;
 	padding-left: 15px;
 	margin-left: -20px;
+	border-left: 5px solid #428bca;
 }
 
 .page-header h1 a:hover {
@@ -133,7 +138,7 @@ article>h1,article>h2 {
 	height: auto;
 }
 
-.icon {
+.glyphicon {
 	line-height: inherit;
 }
 

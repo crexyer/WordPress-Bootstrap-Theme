@@ -19,7 +19,9 @@
 						</ul>
 					</div>
 				</div>
-				<?php the_content( '<button class="btn btn-primary">' . __( 'Read More' ,'Bootstrap' ) . ' <span class="glyphicon glyphicon-chevron-right"></span>' . '</button>' ); ?>
+				<div class="article-content">
+					<?php the_content( '<button class="btn btn-primary">' . __( 'Read More' ,'Bootstrap' ) . ' <span class="glyphicon glyphicon-chevron-right"></span>' . '</button>' ); ?>
+				</div>
 			</article>
 			<?php endwhile; else: ?>
 			<p><?php _e( 'Sorry, this page does not exist.', 'Bootstrap' ); ?></p>
