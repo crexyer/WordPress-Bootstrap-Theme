@@ -6,8 +6,6 @@ jQuery(document)
 					var img_select = 'a[href*=".jpg"]:not(.nofancybox), area[href*=".jpg"]:not(.nofancybox), a[href*=".jpeg"]:not(.nofancybox), area[href*=".jpeg"]:not(.nofancybox), a[href*=".png"]:not(.nofancybox), area[href*=".png"]:not(.nofancybox)';
 					jQuery(img_select).addClass("fancybox");
 					// Comments UI
-					jQuery("#submit").addClass("btn btn-primary");
-					jQuery(".comment-form").addClass("form-horizontal");
 					jQuery(".comment-metadata").addClass("hidden-xs");
 					jQuery('.comment-body').hover(function() {
 						jQuery(this).find(".reply").fadeIn(200);

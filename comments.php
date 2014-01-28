@@ -21,7 +21,7 @@
 	<?php endif; ?>
 	<?php bootstrap_paginate_comments_links(); ?>
 	<?php
-	comment_form ( array (
+	bootstrap_comment_form ( array (
 			'comment_notes_before' => '',
 			'comment_notes_after' => '',
 			'fields' => array (
