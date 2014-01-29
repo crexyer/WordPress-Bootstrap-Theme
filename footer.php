@@ -11,7 +11,6 @@
 	<script src="<?php echo home_url('/wp-includes/js/jquery/jquery.js'); ?>" type="text/javascript"></script>
 	<script src="<?php echo get_template_directory_uri() . '/js/bootstrap.js'; ?>" type="text/javascript"></script>
 	<script src="<?php echo get_template_directory_uri() . '/fancybox/fancybox.js'; ?>" type="text/javascript"></script>
-	<script src="<?php echo get_template_directory_uri() . '/js/modernizr.js'; ?>" type="text/javascript"></script>
 	<script src="<?php echo get_template_directory_uri() . '/js/theme.js'; ?>" type="text/javascript"></script>
 </div>
 </div>
