@@ -1,17 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/bootstrap.css' ; ?>" type="text/css" />
-	<link rel="stylesheet" href="<?php bloginfo ( 'stylesheet_url' );?>">
+	<link rel="stylesheet" href="<?php bloginfo ( 'stylesheet_url' );?>" />
 	<title><?php wp_title ( '|', true, 'right' ); ?></title>
 	<?php echo stripslashes ( get_option ( 'analytics_code', '' ) ); ?>
 </head>
 <body>
 	<a id="gotop" href="#" title="<?php _e ( 'Back to top', 'Bootstrap' ); ?>"></a>
-	<nav class="navbar <?php $navbar_color = get_option ( 'navbar_color', 'black' ); if ( $navbar_color == "black" ) { echo 'navbar-inverse'; } elseif ( $navbar_color == "white" ) { echo 'navbar-default'; } ?> navbar-fixed-top" role="navigation">
+	<nav class="navbar <?php $navbar_color = get_option ( 'navbar_color', 'black' ); if ( $navbar_color == "black" ) { echo 'navbar-inverse'; } elseif ( $navbar_color == "white" ) { echo 'navbar-default'; } ?> navbar-fixed-top">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 		  <div class="navbar-header">
