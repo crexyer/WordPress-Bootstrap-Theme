@@ -16,10 +16,10 @@ a:hover, a:active, a:visited, a:link {
 }
 
 a, .btn, button {
-	transition: color 0.2s ease, background 0.2s ease;
-	-webkit-transition: color 0.2s ease, background 0.2s ease;
-	-moz-transition: color 0.2s ease, background 0.2s ease;
-	-o-transition: color 0.2s ease, background 0.2s ease;
+	transition: color 0.2s ease, background 0.2s ease, border 0.2s ease;
+	-webkit-transition: color 0.2s ease, background 0.2s ease, border 0.2s ease;
+	-moz-transition: color 0.2s ease, background 0.2s ease, border 0.2s ease;
+	-o-transition: color 0.2s ease, background 0.2s ease, border 0.2s ease;
 }
 
 body {
