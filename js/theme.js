@@ -19,6 +19,7 @@ jQuery(document)
 							jQuery(this).parent().removeClass("has-error");
 						}
 					});
+					// Gotop
 					jQuery(function() {
 						jQuery(window).bind("resize scroll", function() {
 							var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
