@@ -24,6 +24,13 @@ function bootstrap_add_admin() {
 				"std" => "",
 				"type" => "textarea",
 				"label" => __ ( 'Enter your analytics codes or other html codes.', 'Bootstrap' )
+		),
+		array (
+				"name" => __ ( 'Footer Code', 'Bootstrap' ),
+				"id" => "footer_code",
+				"std" => "",
+				"type" => "textarea",
+				"label" => sprintf ( __ ( 'Enter your codes like this: %s', 'Bootstrap' ), '&lt;li&gt;&lt;a href=&quot;http://www.abc.com/&quot;&gt;My Link&lt;/a&gt;&lt;/li&gt;' )
 		)
 	);
 	
@@ -123,13 +130,19 @@ function bootstrap_admin() {
 	</form>
 </div>
 <div class="wrap">
-	<h2 class="title"><?php _e ( 'Reset Settings', 'Bootstrap' ); ?></h2>
-	<p><?php _e ( 'If you want to reset your settings, please click reset button.', 'Bootstrap' ); ?></p>
+	<h2><?php _e ( 'Advanced Settings', 'Bootstrap' ); ?></h2>
 	<form method="post">
-		<div class="submit">
-			<input name="reset" class="button" type="submit" value="<?php _e ( 'Reset', 'Bootstrap' ); ?>" />
-			<input type="hidden" name="action" value="reset" />
-		</div>
+		<table class="form-table">
+			<tbody>
+        <tr valign="top">
+					<th scope="row"><label><?php _e ( 'Reset Settings', 'Bootstrap' ); ?></label></th>
+					<td>
+						<input name="reset" class="button" type="submit" value="<?php _e ( 'Reset', 'Bootstrap' ); ?>" />
+						<input type="hidden" name="action" value="reset" />
+					</td>
+				</tr>
+    	</tbody>
+		</table>
 	</form>
 </div>
 <div class="wrap">
@@ -144,9 +157,12 @@ function bootstrap_admin() {
 				<th scope="row"><label><?php _e ( 'Designer', 'Bootstrap' ); ?></label></th>
 				<td>Crexyer</td>
 			</tr>
+			<tr valign="top">
+				<th scope="row"><label><?php _e ( 'Technical Support', 'Bootstrap' ); ?></label></th>
+				<td><a href="http://www.crexyer.com/" target="_blank">http://www.crexyer.com/</a></td>
+			</tr>
 		</tbody>
 	</table>
-	<p><?php printf( __ ( 'If you have feedback or questions, please click %s.', 'Bootstrap' ), '<a href="http://www.crexyer.com/" target="_blank">http://www.crexyer.com/</a>' ); ?></p>
 </div>
 <?php
 	}

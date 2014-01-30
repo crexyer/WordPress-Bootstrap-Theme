@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bootstrap\n"
-"POT-Creation-Date: 2014-01-28 00:17+0800\n"
-"PO-Revision-Date: 2014-01-28 00:18+0800\n"
+"POT-Creation-Date: 2014-01-30 14:00+0800\n"
+"PO-Revision-Date: 2014-01-30 14:00+0800\n"
 "Last-Translator: Crexyer <crexyer@gmail.com>\n"
 "Language-Team: Crexyer <crexyer@gmail.com>\n"
 "Language: zh_CN\n"
@@ -15,15 +15,15 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:7 front-page.php:25 index.php:25 page.php:21 search.php:28
+#: 404.php:7 front-page.php:27 index.php:27 page.php:23 search.php:28
 msgid "Sorry, this page does not exist."
 msgstr "对不起，这个页面不存在。"
 
-#: 404.php:11
+#: 404.php:9
 msgid "Maybe try a search?"
 msgstr "试一试搜索？"
 
-#: 404.php:12 404.php:14 sidebar.php:8
+#: 404.php:11 sidebar.php:6
 msgid "Search"
 msgstr "搜索"
 
@@ -47,11 +47,11 @@ msgstr "评论被关闭"
 msgid "No comments."
 msgstr "没有评论"
 
-#: comments.php:28
+#: comments.php:28 functions.php:410
 msgid "Name"
 msgstr "昵称"
 
-#: comments.php:30
+#: comments.php:30 functions.php:412
 msgid "Email"
 msgstr "邮箱"
 
@@ -87,50 +87,58 @@ msgstr "统计代码"
 msgid "Enter your analytics codes or other html codes."
 msgstr "输入你的统计代码或其他 html 代码。"
 
-#: control.php:53 control.php:63
+#: control.php:29
+msgid "Footer Code"
+msgstr "页尾代码"
+
+#: control.php:33
+#, php-format
+msgid "Enter your codes like this: %s"
+msgstr "输入这样格式的代码：%s"
+
+#: control.php:60 control.php:70
 msgid "Theme Setup"
 msgstr "主题设置"
 
-#: control.php:58
+#: control.php:65
 msgid "Your settings have been saved."
 msgstr "你的设置已经被保存。"
 
-#: control.php:60
+#: control.php:67
 msgid "Your settings have been reset."
 msgstr "你的设置已经被重置。"
 
-#: control.php:120
+#: control.php:127
 msgid "Save"
 msgstr "保存"
 
-#: control.php:126
+#: control.php:133
+msgid "Advanced Settings"
+msgstr "高级设置"
+
+#: control.php:138
 msgid "Reset Settings"
 msgstr "重置设置"
 
-#: control.php:127
-msgid "If you want to reset your settings, please click reset button."
-msgstr "如果你想重置设置，请点击重置按钮。"
-
-#: control.php:130
+#: control.php:140
 msgid "Reset"
 msgstr "重置"
 
-#: control.php:136
+#: control.php:149
 msgid "About"
 msgstr "关于"
 
-#: control.php:140
+#: control.php:153
 msgid "Theme Version"
 msgstr "主题版本"
 
-#: control.php:144
+#: control.php:157
 msgid "Designer"
 msgstr "主题设计"
 
-#: control.php:149
-#, php-format
-msgid "If you have feedback or questions, please click %s."
-msgstr "如果你有反馈或疑问，请点击  %s。"
+#: control.php:161
+msgid "Technical Support"
+msgstr "技术支持"
 
 #: footer.php:4
 #, php-format
@@ -146,7 +154,7 @@ msgstr "使用 %s 构建"
 msgid "http://wordpress.org/"
 msgstr "http://cn.wordpress.org/"
 
-#: front-page.php:22 index.php:22 page.php:18 search.php:25
+#: front-page.php:23 index.php:23 page.php:19 search.php:25
 msgid "Read More"
 msgstr "阅读全文"
 
@@ -159,22 +167,75 @@ msgstr "导航菜单"
 msgid "Page %s"
 msgstr "第 %s 页"
 
-#: functions.php:120 functions.php:217 functions.php:234 functions.php:393
+#: functions.php:120 functions.php:208 functions.php:225 functions.php:384
 msgid "Previous"
 msgstr "上一页"
 
-#: functions.php:121 functions.php:218 functions.php:233 functions.php:394
+#: functions.php:121 functions.php:209 functions.php:224 functions.php:385
 msgid "Next"
 msgstr "下一页"
 
-#: functions.php:307
+#: functions.php:298
 msgid "Page number"
 msgstr "文章页码"
 
-#: functions.php:324 functions.php:335
+#: functions.php:315 functions.php:326
 #, php-format
 msgid "View all posts in %s"
 msgstr "查看%s中的全部文章"
+
+#: functions.php:414
+msgid "Website"
+msgstr "站点"
+
+#: functions.php:418
+#, php-format
+msgid "Required fields are marked %s"
+msgstr "必填项已用%s标注"
+
+#: functions.php:431
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "要发表评论，您必须先<a href=\"%s\">登录</a>。"
+
+#: functions.php:432
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"以<a href=\"%1$s\">%2$s</a>的身份登录。<a href=\"%3$s\" title=\"登出此帐户\">"
+"登出？</a>"
+
+#: functions.php:433
+msgid "Your email address will not be published."
+msgstr "电子邮件地址不会被公开。"
+
+#: functions.php:434
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+"您可以使用这些<abbr title=\"HyperText Markup Language\">HTML</abbr>标签和属"
+"性：%s"
+
+#: functions.php:437
+msgid "Leave a Reply"
+msgstr "发表评论"
+
+#: functions.php:438
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "向%s进行回复"
+
+#: functions.php:439
+msgid "Cancel reply"
+msgstr "取消回复"
+
+#: functions.php:440
+msgid "Post Comment"
+msgstr "发表评论"
 
 #: header.php:13
 msgid "Back to top"
