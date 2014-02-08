@@ -1,6 +1,16 @@
 <?php get_header(); ?>
 <div class="row">
 	<div class="col-lg-9">
+		<?php if ( is_category() ) : ?>
+		<div class="alert alert-info fade in">
+			<p><?php printf( __ ( 'You are currently browsing the archives for the %s category.', 'Bootstrap' ), '<strong>' . single_cat_title( '', false ) . '</strong>' ); ?></p>
+		</div>
+		<?php endif; ?>
+		<?php if ( is_tag() ) : ?>
+		<div class="alert alert-info fade in">
+			<p><?php printf( __ ( 'You are currently browsing the archives for the %s tag.', 'Bootstrap' ), '<strong>' . single_tag_title( '', false ) . '</strong>' ); ?></p>
+		</div>
+		<?php endif; ?>
 		<div class="content-area">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<article>
@@ -20,7 +30,7 @@
 					</div>
 				</div>
 				<div class="article-content">
-					<?php the_content( '<button class="btn btn-primary">' . __( 'Read More' ,'Bootstrap' ) . ' <span class="glyphicon glyphicon-chevron-right"></span>' . '</button>' ); ?>
+					<?php the_content( '<button class="btn btn-primary">' . __( 'Read More', 'Bootstrap' ) . ' <span class="glyphicon glyphicon-chevron-right"></span>' . '</button>' ); ?>
 				</div>
 			</article>
 			<?php endwhile; else: ?>

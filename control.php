@@ -89,7 +89,7 @@ function bootstrap_admin() {
     	<?php } elseif ( $value['type'] == "textarea" ) { ?>
         <tr valign="top">
 					<th scope="row"><label><?php echo $value['name']; ?></label></th>
-					<td><textarea name="<?php echo $value['id']; ?>" class="widefat" rows="5"><?php echo stripslashes ( get_option ( $value['id'], $value['std'] )); ?></textarea>
+					<td><textarea name="<?php echo $value['id']; ?>" class="widefat" rows="5"><?php echo stripslashes ( get_option ( $value['id'], $value['std'] ) ); ?></textarea>
       	<?php
     			if ( isset ( $value ['label'] ) && $value ['label'] != "" ) {
 						echo '<p class="description">' . $value ['label'] . '</p>';

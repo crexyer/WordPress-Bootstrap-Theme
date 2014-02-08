@@ -4,7 +4,7 @@ Theme URI: http://www.crexyer.com/
 Description: A responsive theme built with Bootstrap
 Author: Crexyer
 Author URI: http://www.crexyer.com/
-Version: 1.0.4
+Version: 1.0.5
 Tags: responsive, bootstrap
 License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 License URI: http://creativecommons.org/licenses/by-sa/3.0/
@@ -142,6 +142,10 @@ article {
 	height: auto;
 }
 
+.btn-group {
+    margin-bottom: 10px;
+}
+
 /* Comments */
 .comments-list {
 	margin-top: 20px;
@@ -190,7 +194,7 @@ article {
 }
 
 .widget li {
-	margin: 5px 10px;
+	margin: 5px 0;
 	display: block;
 }
 
