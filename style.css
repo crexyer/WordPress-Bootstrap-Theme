@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
 	color: #FFF;
 	background-color: #428bca;
-	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.125));
+	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.125) 100%);
 	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.125) 100%);
 }
 
