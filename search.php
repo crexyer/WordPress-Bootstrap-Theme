@@ -25,7 +25,14 @@
 				<?php the_content( '<button class="btn btn-primary">' . __( 'Read More' ,'Bootstrap' ) . ' <span class="glyphicon glyphicon-chevron-right"></span>' . '</button>' ); ?>
 			</article>
 			<?php endwhile; else: ?>
-			<p><?php _e( 'Sorry, this page does not exist.', 'Bootstrap' ); ?></p>
+			<article>
+				<div class="page-header">
+					<h1><?php _e( 'No Results', 'Bootstrap' ); ?></h1>
+				</div>
+				<div class="article-content">
+					<p><?php _e( 'Please try another word.', 'Bootstrap' ); ?></p>
+				</div>
+			</article>
 			<?php endif; ?>
 		</div>
 		<!-- /content-area -->

@@ -72,6 +72,14 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Microsoft YaHei UI', 'Microsoft YaHei', DengXian, SimSun, 'Segoe UI', Tahoma, Helvetica, sans-serif;
 }
 
+.modal-open {
+    overflow: auto;
+}
+
+.modal {
+  overflow: hidden;
+}
+
 ::selection {
 	background: rgba(65, 131, 196, 0.4);
 }
