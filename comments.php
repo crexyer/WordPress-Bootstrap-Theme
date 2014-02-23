@@ -4,13 +4,13 @@
 	</div>
 	<h3><?php _e( 'Comments List', 'Bootstrap' ); ?></h3>
 	<?php if (!empty($post->post_password) && $_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password): ?>
-	<p><?php _e( 'Enter password to view comments.', 'Bootstrap' ); ?></p>
+	<ol class="comment-list"><article><?php _e( 'Enter password to view comments.', 'Bootstrap' ); ?></article></ol>
 	<?php elseif (!comments_open()): ?>
-	<p><?php _e( 'Comments are closed.', 'Bootstrap' ); ?></p>
+	<ol class="comment-list"><article><?php _e( 'Comments are closed.', 'Bootstrap' ); ?></article></ol>
 	<?php elseif (!have_comments()): ?>
-	<p><?php _e( 'No comments.', 'Bootstrap' ); ?></p>
+	<ol class="comment-list"><article><?php _e( 'No comments.', 'Bootstrap' ); ?></article></ol>
 	<?php else: ?>
-	<ol class="comments-list">
+	<ol class="comment-list">
 	<?php
 		wp_list_comments ( array (
 				'style' => 'div',
