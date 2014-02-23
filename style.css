@@ -200,7 +200,7 @@ article {
 }
 
 pre {
-	*display: none;
+	display: none;
 }
 /* Comments */
 .comments-list {

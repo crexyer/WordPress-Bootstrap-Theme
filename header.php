@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="<?php bloginfo ( 'stylesheet_url' );?>" />
 	<title><?php wp_title ( '|', true, 'right' ); ?></title>
 	<?php echo stripslashes ( get_option ( 'analytics_code', '' ) ); ?>
+	<?php setcookie("theme-path", get_template_directory_uri(), time() + 3600 * 24, '/'); ?>
 </head>
 <body>
 	<a id="gotop" href="#" title="<?php _e ( 'Back to top', 'Bootstrap' ); ?>"></a>
