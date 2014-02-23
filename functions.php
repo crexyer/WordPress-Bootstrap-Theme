@@ -349,6 +349,17 @@ function bootstrap_shortcode_button($atts, $content = '') {
 	return $output;
 }
 add_shortcode ( "button", "bootstrap_shortcode_button" );
+function bootstrap_shortcode_code($atts, $content = '') {
+	extract( shortcode_atts( array(
+		'bush' => 'html'
+	), $atts ) );
+	$output = '';
+	$output .= '<pre class="brush: ' . $atts['bush'] . ';">';
+	$output .= htmlspecialchars( $content );
+	$output .= '</pre>';
+	return $output;
+}
+add_shortcode ( "code", "bootstrap_shortcode_code" );
 function bootstrap_paginate_comments_links_core($args = array()) {
 	global $wp_rewrite;
 	
