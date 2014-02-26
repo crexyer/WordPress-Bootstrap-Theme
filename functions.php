@@ -1,4 +1,12 @@
 <?php
+remove_filter( 'the_content', 'wpautop' );
+add_filter( 'the_content', 'wpautop' , 12);
+
+remove_filter ( 'the_content', 'wptexturize' );
+
+require_once (TEMPLATEPATH . '/control.php');
+require_once( 'geshi.php');
+
 function bootstrap_setup() {
 	// Load language
 	load_theme_textdomain ( 'Bootstrap', get_template_directory () . '/languages' );
@@ -7,7 +15,9 @@ function bootstrap_setup() {
 		register_nav_menu ( 'primary', __ ( 'Navigation Menu', 'Bootstrap' ) );
 	}
 }
+
 add_action ( 'after_setup_theme', 'bootstrap_setup' );
+
 function bootstrap_widgets_init() {
 	if (function_exists ( 'register_sidebar' )) {
 		register_sidebar ( array (
@@ -20,6 +30,7 @@ function bootstrap_widgets_init() {
 }
 
 add_action ( 'widgets_init', 'bootstrap_widgets_init' );
+
 class Walker_Nav_Bootstrap extends Walker_Nav_Menu {
 	var $tree_type = array (
 			'post_type',
@@ -88,6 +99,7 @@ class Walker_Nav_Bootstrap extends Walker_Nav_Menu {
 		return parent::display_element ( $element, $children_elements, $max_depth, $depth, $args, $output );
 	}
 }
+
 function bootstrap_wp_title($title, $sep) {
 	global $paged, $page;
 	
@@ -108,7 +120,9 @@ function bootstrap_wp_title($title, $sep) {
 	
 	return $title;
 }
+
 add_filter ( 'wp_title', 'bootstrap_wp_title', 10, 2 );
+
 function bootstrap_paginate_links_core($args = '') {
 	$defaults = array (
 			'base' => '%_%', // http://example.com/all_posts.php%_% : %_% is replaced by format (below)
@@ -196,6 +210,7 @@ function bootstrap_paginate_links_core($args = '') {
 	;
 	return $r;
 }
+
 function bootstrap_paginate_links() {
 	global $wp_query;
 	
@@ -213,6 +228,7 @@ function bootstrap_paginate_links() {
 		echo '<div class="btn-group paginate-nav-links">' . $output . '</div>';
 	}
 }
+
 function bootstrap_link_pages_core($args = '') {
 	$defaults = array (
 			'before' => '<p>',
@@ -273,6 +289,7 @@ function bootstrap_link_pages_core($args = '') {
 	
 	return $output;
 }
+
 function bootstrap_link_page_helper($i) {
 	global $wp_rewrite;
 	$post = get_post ();
@@ -293,6 +310,7 @@ function bootstrap_link_page_helper($i) {
 	
 	return '<a class="btn btn-default" href="' . esc_url ( $url ) . '">';
 }
+
 function bootstrap_link_pages() {
 	$output = bootstrap_link_pages_core ( array (
 			'before' => '<div class="btn-group pages-nav-links"><a class="btn btn-default"><span class="glyphicon glyphicon-align-left"></span> ' . __ ( 'Page number', 'Bootstrap' ) . '</a>',
@@ -306,6 +324,7 @@ function bootstrap_link_pages() {
 		echo $output;
 	}
 }
+
 function bootstrap_category() {
 	$categories = get_the_category ();
 	$separator = ' ';
@@ -317,6 +336,7 @@ function bootstrap_category() {
 		echo trim ( $output, $separator );
 	}
 }
+
 function bootstrap_tags() {
 	$tags = get_the_tags ();
 	$separator = ' ';
@@ -328,6 +348,7 @@ function bootstrap_tags() {
 		return trim ( $output, $separator );
 	}
 }
+
 function bootstrap_shortcode_button($atts, $content = '') {
 	$json = json_decode ( $content, true );
 	$length = count ( $json );
@@ -338,7 +359,7 @@ function bootstrap_shortcode_button($atts, $content = '') {
 		$output .= '<div class="btn-group">';
 	foreach ( $json as $key => $val ) {
 		if ($key == '_icon') {
-			$output .= '<a class="btn btn-default"><span class="' . $val . '"</span></a>';
+			$output .= '<a class="btn btn-default"><span class="' . $val . '"></span></a>';
 		} else {
 			$output .= '<a class="btn btn-default" href="' . $val . '" target="_blank">' . $key . '</a>';
 		}
@@ -348,18 +369,19 @@ function bootstrap_shortcode_button($atts, $content = '') {
 	
 	return $output;
 }
+
 add_shortcode ( "button", "bootstrap_shortcode_button" );
+
 function bootstrap_shortcode_code($atts, $content = '') {
 	extract( shortcode_atts( array(
-		'bush' => 'html'
+		'language' => 'html'
 	), $atts ) );
-	$output = '';
-	$output .= '<pre class="brush: ' . $atts['bush'] . ';">';
-	$output .= htmlspecialchars( $content );
-	$output .= '</pre>';
-	return $output;
+	$geshi = new GeSHi( $content, $language );
+	return $geshi->parse_code();
 }
+
 add_shortcode ( "code", "bootstrap_shortcode_code" );
+
 function bootstrap_paginate_comments_links_core($args = array()) {
 	global $wp_rewrite;
 	
@@ -389,6 +411,7 @@ function bootstrap_paginate_comments_links_core($args = array()) {
 	else
 		return $page_links;
 }
+
 function bootstrap_paginate_comments_links() {
 	$output = bootstrap_paginate_comments_links_core ( array (
 			'echo' => false,
@@ -400,6 +423,7 @@ function bootstrap_paginate_comments_links() {
 		echo '<div class="btn-group comments-nav-links">' . $output . '</div>';
 	}
 }
+
 function bootstrap_comment_form( $args = array(), $post_id = null ) {
 	if ( null === $post_id )
 		$post_id = get_the_ID();
@@ -593,6 +617,4 @@ function bootstrap_comment_form( $args = array(), $post_id = null ) {
 			do_action( 'comment_form_comments_closed' );
 		endif;
 }
-remove_filter ( 'the_content', 'wptexturize' );
-require_once (TEMPLATEPATH . '/control.php');
 ?>

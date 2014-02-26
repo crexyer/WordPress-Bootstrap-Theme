@@ -199,12 +199,10 @@ article {
 	margin-bottom: 10px;
 }
 
-pre {
-	display: none;
-}
 /* Comments */
-.comments-list {
+.comment-list {
 	margin-top: 20px;
+	padding-left: 0;
 }
 
 .comment-body {

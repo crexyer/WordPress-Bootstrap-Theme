@@ -84,6 +84,4 @@ jQuery(document).ready(function() {
 	SyntaxHighlighter.defaults['smart-tabs'] = true;
 	SyntaxHighlighter.defaults['tab-size'] = 4;
 	SyntaxHighlighter.all();
-	jQuery('.syntaxhighlighter.toolbar').html('');
-	jQuery('pre').show();
 });
