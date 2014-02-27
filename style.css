@@ -199,6 +199,12 @@ article {
 	margin-bottom: 10px;
 }
 
+pre {
+	font-family: Consolas, Monaco, 'Andale Mono', monospace !important;
+	font-size:14px;
+	tab-size: 4;
+}
+
 /* Comments */
 .comment-list {
 	margin-top: 20px;
