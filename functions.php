@@ -376,7 +376,7 @@ function bootstrap_shortcode_code($atts, $content = '') {
 	extract( shortcode_atts( array(
 		'language' => 'html'
 	), $atts ) );
-	$geshi = new GeSHi( $content, $language );
+	$geshi = new GeSHi( html_entity_decode( $content ), $language );
 	return $geshi->parse_code();
 }
 
