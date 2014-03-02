@@ -162,11 +162,11 @@ article {
 	margin-bottom: 20px;
 }
 
-.article-content a:not(.btn, pre) {
+.article-content a:not(.btn) {
 	border-bottom: 2px solid #eaeaea;
 }
 
-.article-content a:not(.btn, pre):hover {
+.article-content a:not(.btn):hover {
 	border-bottom: 2px solid #2a6496;
 }
 
