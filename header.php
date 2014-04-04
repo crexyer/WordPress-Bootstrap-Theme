@@ -12,7 +12,7 @@
 </head>
 <body>
 	<a id="gotop" href="#" title="<?php _e ( 'Back to top', 'Bootstrap' ); ?>"></a>
-	<nav class="navbar <?php $navbar_color = get_option ( 'navbar_color', 'black' ); if ( $navbar_color == "black" ) { echo 'navbar-inverse'; } elseif ( $navbar_color == "white" ) { echo 'navbar-default'; } ?> navbar-fixed-top">
+	<nav class="navbar <?php $navbar_color = get_option ( 'navbar_color', 'black' ); if ( $navbar_color == "black" ) { echo 'navbar-inverse'; } elseif ( $navbar_color == "white" ) { echo 'navbar-default'; } ?> navbar-fixed-top" style="padding-right: inherit;">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 		  <div class="navbar-header">

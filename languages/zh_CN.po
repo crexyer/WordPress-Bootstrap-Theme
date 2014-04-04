@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bootstrap\n"
-"POT-Creation-Date: 2014-02-13 01:38+0800\n"
-"PO-Revision-Date: 2014-02-13 01:38+0800\n"
+"POT-Creation-Date: 2014-04-04 20:36+0800\n"
+"PO-Revision-Date: 2014-04-04 20:36+0800\n"
 "Last-Translator: Crexyer <crexyer@gmail.com>\n"
 "Language-Team: Crexyer <crexyer@gmail.com>\n"
 "Language: zh_CN\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:7 front-page.php:27 index.php:37 page.php:23
+#: 404.php:7 front-page.php:32 index.php:42 page.php:28
 msgid "Sorry, this page does not exist."
 msgstr "对不起，这个页面不存在。"
 
@@ -47,11 +47,11 @@ msgstr "评论被关闭"
 msgid "No comments."
 msgstr "没有评论"
 
-#: comments.php:28 functions.php:410
+#: comments.php:28 functions.php:445
 msgid "Name"
 msgstr "昵称"
 
-#: comments.php:30 functions.php:412
+#: comments.php:30 functions.php:447
 msgid "Email"
 msgstr "邮箱"
 
@@ -154,51 +154,55 @@ msgstr "使用 %s 构建"
 msgid "http://wordpress.org/"
 msgstr "http://cn.wordpress.org/"
 
-#: front-page.php:23 index.php:33 page.php:19 search.php:25
+#: front-page.php:21 index.php:31 page.php:17
+msgid "Edit"
+msgstr "编辑"
+
+#: front-page.php:28 index.php:38 page.php:24 search.php:25
 msgid "Read More"
 msgstr "阅读全文"
 
-#: functions.php:7
+#: functions.php:15
 msgid "Navigation Menu"
 msgstr "导航菜单"
 
-#: functions.php:107
+#: functions.php:119
 #, php-format
 msgid "Page %s"
 msgstr "第 %s 页"
 
-#: functions.php:120 functions.php:208 functions.php:225 functions.php:384
+#: functions.php:134 functions.php:223 functions.php:241 functions.php:418
 msgid "Previous"
 msgstr "上一页"
 
-#: functions.php:121 functions.php:209 functions.php:224 functions.php:385
+#: functions.php:135 functions.php:224 functions.php:240 functions.php:419
 msgid "Next"
 msgstr "下一页"
 
-#: functions.php:298
+#: functions.php:316
 msgid "Page number"
 msgstr "文章页码"
 
-#: functions.php:315 functions.php:326
+#: functions.php:334 functions.php:346
 #, php-format
 msgid "View all posts in %s"
 msgstr "查看%s中的全部文章"
 
-#: functions.php:414
+#: functions.php:449
 msgid "Website"
 msgstr "站点"
 
-#: functions.php:418
+#: functions.php:453
 #, php-format
 msgid "Required fields are marked %s"
 msgstr "必填项已用%s标注"
 
-#: functions.php:431
+#: functions.php:466
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr "要发表评论，您必须先<a href=\"%s\">登录</a>。"
 
-#: functions.php:432
+#: functions.php:467
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
@@ -207,11 +211,11 @@ msgstr ""
 "以<a href=\"%1$s\">%2$s</a>的身份登录。<a href=\"%3$s\" title=\"登出此帐户\">"
 "登出？</a>"
 
-#: functions.php:433
+#: functions.php:468
 msgid "Your email address will not be published."
 msgstr "电子邮件地址不会被公开。"
 
-#: functions.php:434
+#: functions.php:469
 #, php-format
 msgid ""
 "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
@@ -220,20 +224,20 @@ msgstr ""
 "您可以使用这些<abbr title=\"HyperText Markup Language\">HTML</abbr>标签和属"
 "性：%s"
 
-#: functions.php:437
+#: functions.php:472
 msgid "Leave a Reply"
 msgstr "发表评论"
 
-#: functions.php:438
+#: functions.php:473
 #, php-format
 msgid "Leave a Reply to %s"
 msgstr "向%s进行回复"
 
-#: functions.php:439
+#: functions.php:474
 msgid "Cancel reply"
 msgstr "取消回复"
 
-#: functions.php:440
+#: functions.php:475
 msgid "Post Comment"
 msgstr "发表评论"
 

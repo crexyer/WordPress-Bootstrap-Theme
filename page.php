@@ -12,6 +12,11 @@
 						<ul>
 							<li><span class="glyphicon glyphicon-user"></span> <?php echo get_the_author(); ?></li>
 							<li><span class="glyphicon glyphicon-time"></span> <?php echo get_the_date(); ?></li>
+							<?php
+								if( current_user_can( 'publish_pages' ) ) {
+									edit_post_link( __( 'Edit', 'Bootstrap' ), '<li><span class="glyphicon glyphicon-edit"></span> ', '</li>' );
+								}
+							?>
 						</ul>
 					</div>
 				</div>
