@@ -10,7 +10,7 @@
 				<form method="get" class="input-group" action="<?php echo site_url(); ?>">
 					<input type="search" class="form-control" placeholder="<?php _e ( 'Search', 'Bootstrap' ); ?>" value="" name="s" title="<?php _e ( 'Search', 'Bootstrap' ); ?>">
 					<span class="input-group-btn">
-						<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
+						<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 					</span>
 				</form>
 			</article>

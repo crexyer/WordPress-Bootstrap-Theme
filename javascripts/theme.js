@@ -1,7 +1,7 @@
 jQuery(document).ready(function() {
 	// Add Fancybox
 	jQuery(".fancybox").fancybox();
-	var img_select = 'a[href*=".jpg"]:not(.nofancybox), area[href*=".jpg"]:not(.nofancybox), a[href*=".jpeg"]:not(.nofancybox), area[href*=".jpeg"]:not(.nofancybox), a[href*=".png"]:not(.nofancybox), area[href*=".png"]:not(.nofancybox)';
+	var img_select = 'a[href*=".jpg"]:not(.nofancybox), area[href*=".jpg"]:not(.nofancybox), a[href*=".jpeg"]:not(.nofancybox), area[href*=".jpeg"]:not(.nofancybox), a[href*=".png"]:not(.nofancybox), area[href*=".png"]:not(.nofancybox), a[href*=".gif"]:not(.nofancybox), area[href*=".gif"]:not(.nofancybox)';
 	jQuery(img_select).addClass("fancybox");
 	// Comments UI
 	jQuery(".comment-metadata").addClass("hidden-xs");
