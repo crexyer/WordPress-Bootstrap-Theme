@@ -215,6 +215,11 @@ article {
 	height: auto;
 }
 
+.content-area video {
+	max-width: 100% !important;
+	height: auto !important;
+}
+
 .btn-group {
 	margin-bottom: 10px;
 }

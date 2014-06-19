@@ -1,10 +1,10 @@
 <?php
-remove_filter( 'the_content', 'wpautop' );
-add_filter( 'the_content', 'wpautop' , 12);
+//remove_filter( 'the_content', 'wpautop' );
+//add_filter( 'the_content', 'wpautop' , 12);
 
 remove_filter ( 'the_content', 'wptexturize' );
 
-require_once (TEMPLATEPATH . '/control.php');
+require_once ( TEMPLATEPATH . '/control.php' );
 require_once( 'geshi.php');
 
 function bootstrap_setup() {
@@ -370,7 +370,7 @@ function bootstrap_shortcode_button($atts, $content = '') {
 	return $output;
 }
 
-add_shortcode ( "button", "bootstrap_shortcode_button" );
+//add_shortcode ( "button", "bootstrap_shortcode_button" );
 
 function bootstrap_shortcode_code($atts, $content = '') {
 	extract( shortcode_atts( array(
@@ -380,7 +380,28 @@ function bootstrap_shortcode_code($atts, $content = '') {
 	return $geshi->parse_code();
 }
 
-add_shortcode ( "code", "bootstrap_shortcode_code" );
+//add_shortcode ( "code", "bootstrap_shortcode_code" );
+
+function pre_process_shortcode( $content ) {
+	global $shortcode_tags;
+	
+	// Backup current registered shortcodes and clear them all out
+	$orig_shortcode_tags = $shortcode_tags;
+	$shortcode_tags = array();
+	
+	add_shortcode ( "code", "bootstrap_shortcode_code" );
+	add_shortcode ( "button", "bootstrap_shortcode_button" );
+	
+	// Do the shortcode (only the one above is registered)
+	$content = do_shortcode( $content );
+	
+	// Put the original shortcodes back
+	$shortcode_tags = $orig_shortcode_tags;
+	
+	return $content;
+}
+
+add_filter( 'the_content', 'pre_process_shortcode', 7 );
 
 function bootstrap_paginate_comments_links_core($args = array()) {
 	global $wp_rewrite;

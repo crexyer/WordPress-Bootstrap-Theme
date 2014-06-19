@@ -29,12 +29,12 @@
 				<ul class="nav navbar-nav">
 					<?php if( function_exists( 'wp_nav_menu' ) ) wp_nav_menu( array (
 							'container' => false,
-							'theme_location' => 'primary',
 							'items_wrap' => '%3$s',
 							'walker' => new Walker_Nav_Bootstrap (),
 					)); ?>
 				</ul>
-			</div><!-- /.navbar-collapse -->
+			</div>
+			<!-- /.navbar-collapse -->
 		</div>
 	</nav>
 	<div class="jumbotron">
