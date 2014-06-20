@@ -4,7 +4,7 @@ Theme URI: http://www.crexyer.com/
 Description: A responsive theme built with Bootstrap
 Author: Crexyer
 Author URI: http://www.crexyer.com/
-Version: 1.0.8
+Version: 1.0.9
 Tags: responsive, bootstrap
 License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 License URI: http://creativecommons.org/licenses/by-sa/3.0/
@@ -74,6 +74,11 @@ body {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: 'Microsoft YaHei UI', 'Microsoft YaHei', DengXian, SimSun, 'Segoe UI', Tahoma, Helvetica, sans-serif;
+}
+
+.fancybox-title {
+	font-size: 14px;
+	font-family: 'Microsoft YaHei UI', 'Microsoft YaHei', DengXian, SimSun, 'Segoe UI', Tahoma, Helvetica, sans-serif !important;
 }
 
 h1, .h1 {
@@ -182,13 +187,15 @@ article {
 	margin-bottom: 20px;
 }
 
-.article-content a:not(.btn) {
+/* 
+.article-content a:not([href*=".jpg"]), .article-content a:not(.btn){
 	border-bottom: 2px solid #eaeaea;
 }
 
-.article-content a:not(.btn):hover {
+.article-content a:not([href*=".jpg"]):hover {
 	border-bottom: 2px solid #2a6496;
 }
+*/
 
 .article-content img {
 	background-color: #fff;

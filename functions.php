@@ -349,7 +349,7 @@ function bootstrap_tags() {
 	}
 }
 
-function bootstrap_shortcode_button($atts, $content = '') {
+function bootstrap_shortcode_button( $atts, $content = '' ) {
 	$json = json_decode ( $content, true );
 	$length = count ( $json );
 	$output = '';
@@ -372,7 +372,7 @@ function bootstrap_shortcode_button($atts, $content = '') {
 
 //add_shortcode ( "button", "bootstrap_shortcode_button" );
 
-function bootstrap_shortcode_code($atts, $content = '') {
+function bootstrap_shortcode_code( $atts, $content = '' ) {
 	extract( shortcode_atts( array(
 		'language' => 'html'
 	), $atts ) );
@@ -381,6 +381,25 @@ function bootstrap_shortcode_code($atts, $content = '') {
 }
 
 //add_shortcode ( "code", "bootstrap_shortcode_code" );
+
+function bootstrap_shortcode_gallery( $atts, $content = '' ) {
+	$json = json_decode ( $content, true );
+	$length = count ( $json );
+	$output = '';
+	$output .= '<div class="row">';
+	$gallery_group = rand( 1, 9999 );
+	foreach ( $json as $val ) {
+			$output .= '
+	<div class="col-xs-6 col-md-3">
+		<a href="'. $val .'" class="thumbnail" rel="gallery' . $gallery_group . '"><img src="'. $val .'"></a>
+	</div>';
+	}
+	$output .= '</div>';
+	
+	return $output;
+}
+
+//add_shortcode ( "gallery", "bootstrap_shortcode_gallery" );
 
 function pre_process_shortcode( $content ) {
 	global $shortcode_tags;
@@ -391,6 +410,7 @@ function pre_process_shortcode( $content ) {
 	
 	add_shortcode ( "code", "bootstrap_shortcode_code" );
 	add_shortcode ( "button", "bootstrap_shortcode_button" );
+	add_shortcode ( "gallery", "bootstrap_shortcode_gallery" );
 	
 	// Do the shortcode (only the one above is registered)
 	$content = do_shortcode( $content );
