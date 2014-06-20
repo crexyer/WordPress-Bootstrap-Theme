@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bootstrap\n"
-"POT-Creation-Date: 2014-04-04 20:36+0800\n"
-"PO-Revision-Date: 2014-04-04 20:36+0800\n"
+"POT-Creation-Date: 2014-06-20 22:07+0800\n"
+"PO-Revision-Date: 2014-06-20 22:07+0800\n"
 "Last-Translator: Crexyer <crexyer@gmail.com>\n"
 "Language-Team: Crexyer <crexyer@gmail.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.6.5\n"
 "X-Poedit-KeywordsList: _e;__\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -47,11 +47,11 @@ msgstr "评论被关闭"
 msgid "No comments."
 msgstr "没有评论"
 
-#: comments.php:28 functions.php:445
+#: comments.php:28 functions.php:502
 msgid "Name"
 msgstr "昵称"
 
-#: comments.php:30 functions.php:447
+#: comments.php:30 functions.php:504
 msgid "Email"
 msgstr "邮箱"
 
@@ -171,11 +171,11 @@ msgstr "导航菜单"
 msgid "Page %s"
 msgstr "第 %s 页"
 
-#: functions.php:134 functions.php:223 functions.php:241 functions.php:418
+#: functions.php:134 functions.php:223 functions.php:241 functions.php:475
 msgid "Previous"
 msgstr "上一页"
 
-#: functions.php:135 functions.php:224 functions.php:240 functions.php:419
+#: functions.php:135 functions.php:224 functions.php:240 functions.php:476
 msgid "Next"
 msgstr "下一页"
 
@@ -188,21 +188,29 @@ msgstr "文章页码"
 msgid "View all posts in %s"
 msgstr "查看%s中的全部文章"
 
-#: functions.php:449
+#: functions.php:398
+msgid "Browse gallery"
+msgstr "浏览图集"
+
+#: functions.php:399
+msgid "Press arrow keys in the keyboard to switch images"
+msgstr "按下键盘上的方向键切换图片"
+
+#: functions.php:506
 msgid "Website"
 msgstr "站点"
 
-#: functions.php:453
+#: functions.php:510
 #, php-format
 msgid "Required fields are marked %s"
 msgstr "必填项已用%s标注"
 
-#: functions.php:466
+#: functions.php:523
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr "要发表评论，您必须先<a href=\"%s\">登录</a>。"
 
-#: functions.php:467
+#: functions.php:524
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
@@ -211,11 +219,11 @@ msgstr ""
 "以<a href=\"%1$s\">%2$s</a>的身份登录。<a href=\"%3$s\" title=\"登出此帐户\">"
 "登出？</a>"
 
-#: functions.php:468
+#: functions.php:525
 msgid "Your email address will not be published."
 msgstr "电子邮件地址不会被公开。"
 
-#: functions.php:469
+#: functions.php:526
 #, php-format
 msgid ""
 "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
@@ -224,20 +232,20 @@ msgstr ""
 "您可以使用这些<abbr title=\"HyperText Markup Language\">HTML</abbr>标签和属"
 "性：%s"
 
-#: functions.php:472
+#: functions.php:529
 msgid "Leave a Reply"
 msgstr "发表评论"
 
-#: functions.php:473
+#: functions.php:530
 #, php-format
 msgid "Leave a Reply to %s"
 msgstr "向%s进行回复"
 
-#: functions.php:474
+#: functions.php:531
 msgid "Cancel reply"
 msgstr "取消回复"
 
-#: functions.php:475
+#: functions.php:532
 msgid "Post Comment"
 msgstr "发表评论"
 

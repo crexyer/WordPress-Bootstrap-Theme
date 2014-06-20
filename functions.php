@@ -386,20 +386,37 @@ function bootstrap_shortcode_gallery( $atts, $content = '' ) {
 	$json = json_decode ( $content, true );
 	$length = count ( $json );
 	$output = '';
-	$output .= '<div class="row">';
 	$gallery_group = rand( 1, 9999 );
+	if ( $length == 0 ) {
+		return $output;
+	}
+	
+	$output .= '<div class="carousel-inner">
+	<a href="' . $json[0] . '" rel="gallery' . $gallery_group . '">
+		<div class="item active">
+			<img src="' . $json[0] . '" alt="First slide image">
+			<div class="carousel-caption" style="left:0; right:0; bottom:0; background-color:rgba(0,0,0,0.3);">
+				<h2>' . __ ( 'Browse gallery' , 'Bootstrap') . '</h2>
+				<p>' . __ ( 'Press arrow keys in the keyboard to switch images', 'Bootstrap' ) . '</p>
+			</div>
+		</div>
+	</a>
+</div>';
+	
+	$output .= '<div style="display:none;">';
+	$count = 0;
 	foreach ( $json as $val ) {
-			$output .= '
-	<div class="col-xs-6 col-md-3">
-		<a href="'. $val .'" class="thumbnail" rel="gallery' . $gallery_group . '"><img src="'. $val .'"></a>
-	</div>';
+		$count++;
+		if ( $count > 1 ) {
+			$output .= '<p><a href="'. $val .'" rel="gallery' . $gallery_group . '"><img src="'. $val .'"></a></p>';
+		}
 	}
 	$output .= '</div>';
 	
 	return $output;
 }
 
-//add_shortcode ( "gallery", "bootstrap_shortcode_gallery" );
+add_shortcode ( "gallery", "bootstrap_shortcode_gallery" );
 
 function pre_process_shortcode( $content ) {
 	global $shortcode_tags;
@@ -410,7 +427,7 @@ function pre_process_shortcode( $content ) {
 	
 	add_shortcode ( "code", "bootstrap_shortcode_code" );
 	add_shortcode ( "button", "bootstrap_shortcode_button" );
-	add_shortcode ( "gallery", "bootstrap_shortcode_gallery" );
+	//add_shortcode ( "gallery", "bootstrap_shortcode_gallery" );
 	
 	// Do the shortcode (only the one above is registered)
 	$content = do_shortcode( $content );
