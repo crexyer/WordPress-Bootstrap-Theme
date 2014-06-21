@@ -396,18 +396,24 @@ function bootstrap_shortcode_gallery( $atts, $content = '' ) {
 		return $output;
 	}
 	
-	if ( $title == 'false' ) {
-		$output .= '';
-	}
+
 
 	$count = 0;
 	foreach ( $json as $key => $val ) {
 		$count++;
+		
+		if ( $title == 'true' ) {
+			$output_img = $key;
+			$output_title = $val;
+		} else {
+			$output_img = $val;
+		}
+
 		if ( $count == 1 ) {
 			$output .= '<div class="carousel-inner" style="margin-bottom:10px;">
-	<a href="' . $key . '" rel="gallery' . $gallery_group . '"' . ( $title == 'true' ? ' title="' . $val . '"' : '' ) . '>
+	<a href="' . $output_img . '" rel="gallery' . $gallery_group . '"' . ( $title == 'true' ? ' title="' . $output_title . '"' : '' ) . '>
 		<div class="item active">
-			<img src="' . $key . '">
+			<img src="' . $output_img . '">
 			<div class="carousel-caption" style="left:0; right:0; bottom:0; background-color:rgba(0,0,0,0.3);">
 				<h2><span class="glyphicon glyphicon-picture"></span> ' . __ ( 'Browse gallery' , 'Bootstrap') . '</h2>
 				<p>' . __ ( 'Press arrow keys in the keyboard to switch images', 'Bootstrap' ) . '</p>
@@ -422,7 +428,7 @@ function bootstrap_shortcode_gallery( $atts, $content = '' ) {
 		}
 		
 		if ( $count > 1 ) {
-			$output .= '<p><a href="'. $key .'" rel="gallery' . $gallery_group . '"' . ( $title == 'true' ? ' title="' . $val . '"' : '' ) . '><img src="'. $key .'"></a></p>';
+			$output .= '<p><a href="'. $output_img .'" rel="gallery' . $gallery_group . '"' . ( $title == 'true' ? ' title="' . $output_title . '"' : '' ) . '><img src="'. $output_img .'"></a></p>';
 			
 			if ( $count == $length ) {
 				$output .= '</div>';
