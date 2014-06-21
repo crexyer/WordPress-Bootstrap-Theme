@@ -9,7 +9,7 @@ jQuery(document).ready(function() {
 		prevEffect : 'fade',
 		afterLoad : function() {
 			if (this.group.length > 1) {
-				this.title = (this.index + 1) + ' / ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				this.title = (this.title ? ' [ ' : '') + (this.index + 1) + ' / ' + this.group.length + (this.title ? ' ] ' + this.title : '');
 			}
 		}
 	});

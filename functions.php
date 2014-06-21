@@ -383,35 +383,52 @@ function bootstrap_shortcode_code( $atts, $content = '' ) {
 //add_shortcode ( "code", "bootstrap_shortcode_code" );
 
 function bootstrap_shortcode_gallery( $atts, $content = '' ) {
+	extract( shortcode_atts( array(
+		'title' => 'false'
+	), $atts ) );
+	
 	$json = json_decode ( $content, true );
 	$length = count ( $json );
 	$output = '';
 	$gallery_group = rand( 1, 9999 );
+	
 	if ( $length == 0 ) {
 		return $output;
 	}
 	
-	$output .= '<div class="carousel-inner">
-	<a href="' . $json[0] . '" rel="gallery' . $gallery_group . '">
+	if ( $title == 'false' ) {
+		$output .= '';
+	}
+
+	$count = 0;
+	foreach ( $json as $key => $val ) {
+		$count++;
+		if ( $count == 1 ) {
+			$output .= '<div class="carousel-inner" style="margin-bottom:10px;">
+	<a href="' . $key . '" rel="gallery' . $gallery_group . '"' . ( $title == 'true' ? ' title="' . $val . '"' : '' ) . '>
 		<div class="item active">
-			<img src="' . $json[0] . '" alt="First slide image">
+			<img src="' . $key . '">
 			<div class="carousel-caption" style="left:0; right:0; bottom:0; background-color:rgba(0,0,0,0.3);">
-				<h2>' . __ ( 'Browse gallery' , 'Bootstrap') . '</h2>
+				<h2><span class="glyphicon glyphicon-picture"></span> ' . __ ( 'Browse gallery' , 'Bootstrap') . '</h2>
 				<p>' . __ ( 'Press arrow keys in the keyboard to switch images', 'Bootstrap' ) . '</p>
 			</div>
 		</div>
 	</a>
 </div>';
-	
-	$output .= '<div style="display:none;">';
-	$count = 0;
-	foreach ( $json as $val ) {
-		$count++;
+		}
+		
+		if ( $count == 2 ) {
+			$output .= '<div style="display:none;">';
+		}
+		
 		if ( $count > 1 ) {
-			$output .= '<p><a href="'. $val .'" rel="gallery' . $gallery_group . '"><img src="'. $val .'"></a></p>';
+			$output .= '<p><a href="'. $key .'" rel="gallery' . $gallery_group . '"' . ( $title == 'true' ? ' title="' . $val . '"' : '' ) . '><img src="'. $key .'"></a></p>';
+			
+			if ( $count == $length ) {
+				$output .= '</div>';
+			}
 		}
 	}
-	$output .= '</div>';
 	
 	return $output;
 }
