@@ -11,8 +11,8 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/fancybox/fancybox.css' ; ?>" type="text/css" />
 <script src="<?php echo home_url('/wp-includes/js/jquery/jquery.js'); ?>" type="text/javascript"></script>
-<script src="<?php echo get_template_directory_uri() . '/javascripts/bootstrap.js'; ?>" type="text/javascript"></script>
+<script src="<?php echo get_template_directory_uri() . '/js/bootstrap.js'; ?>" type="text/javascript"></script>
 <script src="<?php echo get_template_directory_uri() . '/fancybox/fancybox.js'; ?>" type="text/javascript"></script>
-<script src="<?php echo get_template_directory_uri() . '/javascripts/theme.js'; ?>" type="text/javascript"></script>
+<script src="<?php echo get_template_directory_uri() . '/js/theme.js'; ?>" type="text/javascript"></script>
 </body>
 </html>
