@@ -396,8 +396,6 @@ function bootstrap_shortcode_gallery( $atts, $content = '' ) {
 		return $output;
 	}
 	
-
-
 	$count = 0;
 	foreach ( $json as $key => $val ) {
 		$count++;
