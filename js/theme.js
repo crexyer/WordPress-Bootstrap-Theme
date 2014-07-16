@@ -53,7 +53,7 @@ jQuery(document).ready(function() {
 		}
 	});
 
-	// Gotop button function
+	// Gotop Button function
 	jQuery(function() {
 		jQuery(window).bind("resize scroll", function() {
 			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;

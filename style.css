@@ -4,7 +4,7 @@ Theme URI: http://www.crexyer.com/
 Description: A responsive theme built with Bootstrap
 Author: Crexyer
 Author URI: http://www.crexyer.com/
-Version: 1.0.8
+Version: 1.0.9
 Tags: responsive, bootstrap
 License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 License URI: http://creativecommons.org/licenses/by-sa/3.0/
@@ -20,10 +20,10 @@ a:hover, a:active, a:visited, a:link {
 }
 
 a, .btn, button {
-	transition: color 0.2s ease, background 0.2s ease, border 0.2s ease;
 	-webkit-transition: color 0.2s ease, background 0.2s ease, border 0.2s ease;
 	-moz-transition: color 0.2s ease, background 0.2s ease, border 0.2s ease;
 	-o-transition: color 0.2s ease, background 0.2s ease, border 0.2s ease;
+	transition: color 0.2s ease, background 0.2s ease, border 0.2s ease;
 }
 
 .btn-default, .btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger {
@@ -57,19 +57,19 @@ a, .btn, button {
 }
 
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
-	transition: background 0.2s ease;
 	-webkit-transition: background 0.2s ease;
 	-moz-transition: background 0.2s ease;
 	-o-transition: background 0.2s ease;
+	transition: background 0.2s ease;
 }
 
 body {
 	/* Move down content because we have a fixed navbar that is 50px tall */
 	padding-top: 50px;
 	padding-bottom: 20px;
+	background: #f3f3f2;
 	font-family: 'Microsoft YaHei UI', 'Microsoft YaHei', DengXian, SimSun, 'Segoe UI', Tahoma, Helvetica, sans-serif;
 	line-height: 2;
-	background: #f3f3f2;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -175,16 +175,6 @@ article {
 	margin-bottom: 20px;
 }
 
-/* 
-.article-content a:not([href*=".jpg"]), .article-content a:not(.btn){
-	border-bottom: 2px solid #eaeaea;
-}
-
-.article-content a:not([href*=".jpg"]):hover {
-	border-bottom: 2px solid #2a6496;
-}
-*/
-
 .article-content img {
 	background-color: #fff;
 }
@@ -261,7 +251,8 @@ pre {
 
 .depth-2, .depth-3 {
 	padding-left: 60px;
-	background: url(images/arrow.png) 0 10px no-repeat;
+	background: url(images/arrow.svg) 5px 5px no-repeat;
+	background-size: 50px 50px;
 }
 
 .comments-list {
@@ -296,10 +287,9 @@ pre {
 	margin-bottom: 20px;
 }
 
-/* Go Top Button */
+/* Gotop Button */
 
 #gotop {
-	/*background: url(images/gotop.png) 0 0 no-repeat;*/
 	width: 100px;
 	height: 100px;
 	position: fixed;
@@ -313,9 +303,11 @@ pre {
 #rocket {
 	cursor: pointer;
 }
+
 /*=============================================
 [ Inactive State Styles ]
-==============================================*/
+=============================================*/
+
 #rocket .fire {
 	display: none;
 	fill: #FC0;
@@ -383,32 +375,26 @@ pre {
 
 /*=============================================
 [ Hover Styles ]
-==============================================*/
+=============================================*/
+
 #rocket:hover .icon-circle {
 	fill: rgb(137, 183, 223);
 }
 
 #rocket:hover .rocket-base {
 	fill: #fff;
-	stroke: #fff;
-	stroke-width: 3px;
 }
 
 #rocket:hover .window {
 	fill: rgb(137, 183, 223);
-	stroke: #fff;
-	stroke-width: 2px;
 }
 
 #rocket:hover .rocket-bottom {
 	fill: #fff;
-	stroke: #fff;
 }
 
 #rocket:hover .wing-base {
 	fill: #fff;
-	stroke: #fff;
-	stroke-width: 3px;
 }
 
 #rocket:hover .wing-shadow {
@@ -421,19 +407,18 @@ pre {
 
 /*=============================================
 [ Clicked Styles ]
-==============================================*/
+=============================================*/
+
 #rocket.clicked .fire {
 	display: block !important;
 }
 
 #rocket.clicked .rocket-base {
 	fill: #FFFFFF !important;
-	stroke-width: 0px !important;
 }
 
 #rocket.clicked .rocket-shadow {
 	fill: #EDEDED !important;
-	stroke-width: 0px !important;
 }
 
 #rocket.clicked .icon-circle {
@@ -442,7 +427,6 @@ pre {
 
 #rocket.clicked .window {
 	fill: #28B767 !important;
-	stroke-width: 0px !important;
 }
 
 #rocket.clicked .wing-shadow {
@@ -452,12 +436,10 @@ pre {
 
 #rocket.clicked .wing-base {
 	fill: #E16E36 !important;
-	stroke-width: 0px !important;
 }
 
 #rocket.clicked .rocket-bottom {
 	fill: #2DCB73 !important;
-	stroke-width: 0px !important;
 }
 
 #rocket.clicked .rocket-inner {
@@ -467,9 +449,11 @@ pre {
 	-o-transform: translateY(0px) !important;
 	transform: translateY(0px) !important;
 }
+
 /*=============================================
 [ KeyFrame Animations ]
-==============================================*/
+=============================================*/
+
 @keyframes fireSmall {
 
 	10% {
@@ -947,17 +931,14 @@ pre {
 
 	0% {
 		fill-opacity: 1;
-		stroke-opacity: 1;
 	}
 
 	50% {
 		fill-opacity: 1;
-		stroke-opacity: 1;
 	}
 
 	100% {
 		fill-opacity: 0;
-		stroke-opacity: 0;
 	}
 }
 
@@ -965,17 +946,14 @@ pre {
 
 	0% {
 		fill-opacity: 1;
-		stroke-opacity: 1;
 	}
 
 	50% {
 		fill-opacity: 1;
-		stroke-opacity: 1;
 	}
 
 	100% {
 		fill-opacity: 0;
-		stroke-opacity: 0;
 	}
 }
 
@@ -983,17 +961,14 @@ pre {
  
 	0% {
 		fill-opacity: 1;
-		stroke-opacity: 1;
 	}
 
 	50% {
 		fill-opacity: 1;
-		stroke-opacity: 1;
 	}
 
 	100% {
 		fill-opacity: 0;
-		stroke-opacity: 0;
 	}
 }
 
@@ -1001,17 +976,14 @@ pre {
 
 	0% {
 		fill-opacity: 1;
-		stroke-opacity: 1;
 	}
 
 	25% {
 		fill-opacity: 1;
-		stroke-opacity: 1;
 	}
 
 	100% {
 		fill-opacity: 0;
-		stroke-opacity: 0;
 	}
 }
 
@@ -1019,17 +991,14 @@ pre {
  
 	0% {
 		fill-opacity: 1;
-		stroke-opacity: 1;
 	}
 
 	25% {
 		fill-opacity: 1;
-		stroke-opacity: 1;
 	}
 
 	100% {
 		fill-opacity: 0;
-		stroke-opacity: 0;
 	}
 }
 
@@ -1037,17 +1006,14 @@ pre {
  
 	0% {
 		fill-opacity: 1;
-		stroke-opacity: 1;
 	}
 
 	25% {
 		fill-opacity: 1;
-		stroke-opacity: 1;
 	}
 
 	100% {
 		fill-opacity: 0;
-		stroke-opacity: 0;
 	}
 }
 
@@ -1055,17 +1021,14 @@ pre {
  
 	0% {
 		fill-opacity: 1;
-		stroke-opacity: 1;
 	}
 
 	67% {
 		fill-opacity: 1;
-		stroke-opacity: 1;
 	}
 
 	100% {
 		fill-opacity: 0;
-		stroke-opacity: 0;
 	}
 }
 
@@ -1073,17 +1036,14 @@ pre {
  
 	0% {
 		fill-opacity: 1;
-		stroke-opacity: 1;
 	}
 
 	67% {
 		fill-opacity: 1;
-		stroke-opacity: 1;
 	}
 
 	100% {
 		fill-opacity: 0;
-		stroke-opacity: 0;
 	}
 }
 
@@ -1091,17 +1051,14 @@ pre {
  
 	0% {
 		fill-opacity: 1;
-		stroke-opacity: 1;
 	}
 
 	67% {
 		fill-opacity: 1;
-		stroke-opacity: 1;
 	}
 
 	100% {
 		fill-opacity: 0;
-		stroke-opacity: 0;
 	}
 }
 
@@ -1137,9 +1094,11 @@ pre {
 		-moz-transform: translateY(20px)
 	}
 }
+
 /*=============================================
 [ Animation Classes ]
-==============================================*/
+=============================================*/
+
 .fire {
 	-webkit-animation-timing-function: ease-in;
 	-moz-animation-timing-function: ease-in;
