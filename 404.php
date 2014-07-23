@@ -3,7 +3,7 @@
 	<div class="col-lg-12">
 		<div class="content-area">
 			<article>
-				<div class="page-header">
+				<div class="content-title">
 					<h1><?php _e ( 'Sorry, this page does not exist.', 'Bootstrap' ); ?></h1>
 				</div>
 				<p><?php _e ( 'Maybe try a search?', 'Bootstrap' ); ?></p>

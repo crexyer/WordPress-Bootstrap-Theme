@@ -4,7 +4,7 @@ Theme URI: http://www.crexyer.com/
 Description: A responsive theme built with Bootstrap
 Author: Crexyer
 Author URI: http://www.crexyer.com/
-Version: 1.0.9
+Version: 1.1.0
 Tags: responsive, bootstrap
 License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 License URI: http://creativecommons.org/licenses/by-sa/3.0/
@@ -19,7 +19,7 @@ a:hover, a:active, a:visited, a:link {
 	outline: none !important;
 }
 
-a, .btn, button {
+a, .btn, button, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	-webkit-transition: color 0.2s ease, background 0.2s ease, border 0.2s ease;
 	-moz-transition: color 0.2s ease, background 0.2s ease, border 0.2s ease;
 	-o-transition: color 0.2s ease, background 0.2s ease, border 0.2s ease;
@@ -67,7 +67,7 @@ body {
 	/* Move down content because we have a fixed navbar that is 50px tall */
 	padding-top: 50px;
 	padding-bottom: 20px;
-	background: #f3f3f2;
+	background: #f3f3f3;
 	font-family: 'Microsoft YaHei UI', 'Microsoft YaHei', DengXian, SimSun, 'Segoe UI', Tahoma, Helvetica, sans-serif;
 	line-height: 2;
 }
@@ -124,7 +124,7 @@ h6, .h6 {
 .jumbotron {
 	padding-top: 30px;
 	padding-bottom: 5px;
-	background: #f3f3f2;
+	background: #f3f3f3;
 }
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
@@ -179,25 +179,29 @@ article {
 	background-color: #fff;
 }
 
-.page-header h1 a {
+.content-title {
+
+	margin-bottom: 15px;
+	border-bottom: 1px solid #eee;
+}
+
+.content-title h1 {
+	margin: 10px 0 10px -20px;
 	padding-left: 15px;
-	margin-left: -20px;
 	border-left: 5px solid #428bca;
 }
 
-.page-header h1 a:hover {
-	padding-left: 15px;
-	margin-left: -20px;
+.content-title h1:hover {
 	border-left: 5px solid #2a6496;
-}
-
-.content-area .page-header {
-	margin-top: 0;
 }
 
 .content-area img {
 	max-width: 100%;
 	height: auto;
+}
+
+.content-area article {
+	padding-bottom: 10px;
 }
 
 .content-area video {
@@ -232,9 +236,13 @@ pre {
 	margin-top: -30px;
 }
 
-.comment-content {
+.comment-content, .comment-awaiting-moderation {
 	margin-left: 40px;
 	margin-top: 5px;
+}
+
+.comment-awaiting-moderation {
+	color: #428bca;
 }
 
 .fn {
@@ -247,6 +255,7 @@ pre {
 	position: absolute;
 	top: 47px;
 	display: none;
+	left: 22px;
 }
 
 .depth-2, .depth-3 {
@@ -270,7 +279,7 @@ pre {
 }
 
 .widget-panel h3 {
-	padding-bottom: 10px;
+	margin-bottom: 15px;
 	margin-top: 30px;
 }
 
@@ -290,8 +299,8 @@ pre {
 /* Gotop Button */
 
 #gotop {
-	width: 100px;
-	height: 100px;
+	width: 75px;
+	height: 75px;
 	position: fixed;
 	bottom: 40px;
 	right: 40px;
@@ -314,11 +323,11 @@ pre {
 }
 
 #rocket .rocket-inner {
-	transform: translateY(10px);
-	-webkit-transform: translateY(10px);
-	-moz-transform: translateY(10px);
-	-ms-transform: translateY(10px);
-	-o-transform: translateY(10px);
+	transform: translateY(6px);
+	-webkit-transform: translateY(6px);
+	-moz-transform: translateY(6px);
+	-ms-transform: translateY(6px);
+	-o-transform: translateY(6px);
     /*transition*/
 	-webkit-transition: .3s;
 	-moz-transition: .3s;
@@ -341,7 +350,7 @@ pre {
 	-moz-transition: .2s;
 	-o-transition: .2s;
 	transition: .2s;
-	fill: rgba(255, 255, 255, 0.4);
+	fill: rgba(255, 255, 255, 0.6);
 }
 
 #rocket .window {
@@ -350,7 +359,7 @@ pre {
 	-moz-transition: .2s;
 	-o-transition: .2s;
 	transition: .2s;
-	fill: rgba(255, 255, 255, 0.4);
+	fill: rgba(255, 255, 255, 0.6);
 }
 
 #rocket .wing-shadow {

@@ -4,17 +4,16 @@ Designed By Crexyer
 =============================================*/
 
 var config = {
-    "fadeTime": 200,
-    "linkNormal": "2px solid #eaeaea",
-    "linkHover": "2px solid #2a6496",
-    "linkSelect": '.article-content p a:not([href*=".jpg"], [href*=".jpeg"], [href*=".png"], [href*=".gif"], .btn)',
-    "imgSelect": 'a[href*=".jpg"]:not(.nofancybox), a[href*=".jpeg"]:not(.nofancybox), a[href*=".png"]:not(.nofancybox), a[href*=".gif"]:not(.nofancybox)'
+	"fadeTime": 200,
+	"linkNormal": "2px solid #eaeaea",
+	"linkHover": "2px solid #2a6496",
+	"linkSelect": '.article-content p a:not([href*=".jpg"], [href*=".jpeg"], [href*=".png"], [href*=".gif"], .btn)',
+	"imgSelect": 'a[href*=".jpg"]:not(.nofancybox), a[href*=".jpeg"]:not(.nofancybox), a[href*=".png"]:not(.nofancybox), a[href*=".gif"]:not(.nofancybox)'
 };
 
 jQuery(document).ready(function() {
 	// Add fancybox
 	jQuery(config["imgSelect"]).addClass("fancybox");
-
 	jQuery(".fancybox").fancybox({
 		loop: false,
 		nextEffect: 'fade',
@@ -28,7 +27,6 @@ jQuery(document).ready(function() {
 
 	// Add link effects
 	jQuery(config["linkSelect"]).css("border-bottom", config["linkNormal"]);
-
 	jQuery(config["linkSelect"]).hover(function() {
 		jQuery(this).css("border-bottom", config["linkHover"]);
 	}, function() {
@@ -37,7 +35,6 @@ jQuery(document).ready(function() {
 
 	// Add comments CSS styles
 	jQuery(".comment-metadata").addClass("hidden-xs");
-
 	jQuery('.comment-body').hover(function() {
 		jQuery(this).find(".reply").fadeIn(config["fadeTime"]);
 	}, function() {
@@ -63,9 +60,7 @@ jQuery(document).ready(function() {
 				jQuery("#gotop").stop().fadeOut(config["fadeTime"]);
 			}
 		});
-
 		var animateFinish = true;
-
 		jQuery("#gotop").click(function() {
 			if (animateFinish == false) {
 				return false;
@@ -75,13 +70,12 @@ jQuery(document).ready(function() {
 
 			// Clicked Styles
 			jQuery("#rocket").attr("class", "clicked");
-
 			jQuery("html,body").animate({
 				scrollTop: 0
 			}, 500, "swing", function() {
 				animateFinish = true;
 				setTimeout(function() {
-					jQuery("#rocket").removeAttr("class")
+					jQuery("#rocket").removeAttr("class");
 				},config["fadeTime"]);
 			});
 
