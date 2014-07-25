@@ -38,7 +38,7 @@
 	</nav>
 	<div class="jumbotron">
 		<div class="container">
-			<h1><?php bloginfo ( 'name' ); ?></h1>
+			<h1><?php bloginfo ( 'name' ); $subtext_for_header = get_option ( 'subtext_for_header', '' ); if ( $subtext_for_header != "" ) { echo ' <small>' . $subtext_for_header . '</small>'; } ?></h1>
 			<p>
 				<?php bloginfo ( 'description', 'display' ); ?>
 			</p>

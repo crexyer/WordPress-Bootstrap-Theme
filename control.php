@@ -9,6 +9,12 @@ function bootstrap_add_admin() {
 				"type" => "text"
 		),
 		array (
+				"name" => __ ( 'Subtext for Header', 'Bootstrap' ),
+				"id" => "subtext_for_header",
+				"std" => "",
+				"type" => "text"
+		),
+		array (
 				"name" => __ ( 'Navbar Color', 'Bootstrap' ),
 				"id" => "navbar_color",
 				"std" => "black",

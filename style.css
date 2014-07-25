@@ -140,6 +140,7 @@ h6, .h6 {
 
 blockquote {
 	font-size: 15px;
+	background-color:#f8f8f8;
 }
 
 hr {
@@ -323,11 +324,11 @@ pre {
 }
 
 #rocket .rocket-inner {
-	transform: translateY(6px);
-	-webkit-transform: translateY(6px);
-	-moz-transform: translateY(6px);
-	-ms-transform: translateY(6px);
-	-o-transform: translateY(6px);
+	transform: translateY(7px);
+	-webkit-transform: translateY(7px);
+	-moz-transform: translateY(7px);
+	-ms-transform: translateY(7px);
+	-o-transform: translateY(7px);
     /*transition*/
 	-webkit-transition: .3s;
 	-moz-transition: .3s;
